@@ -1,0 +1,433 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//estudiantes-calendario//ES
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Movistar Estudiantes 26/27
+X-WR-TIMEZONE:Europe/Madrid
+BEGIN:VEVENT
+UID:estu-2627-j01@estudiantes-calendario
+DTSTAMP:20261015T210206Z
+DTSTART:20260925T100000Z
+DTEND:20260925T120000Z
+SUMMARY:🏀 Estu 78-65 Insolac Caja 87 ✅ (J1)
+DESCRIPTION:Primera FEB 26/27 · Jornada 1\\nEstu en casa vs Insolac Caja 87\\nResultado: Estu 78-65 victoria ✅\\nActa FEB: https://baloncestoenvivo.feb.es/Partido.aspx?p=2535730
+URL:https://baloncestoenvivo.feb.es/Partido.aspx?p=2535730
+LOCATION:Movistar Arena\, Madrid
+TRANSP:TRANSPARENT
+STATUS:CONFIRMED
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:estu-2627-j02@estudiantes-calendario
+DTSTAMP:20261015T210206Z
+DTSTART:20261002T100000Z
+DTEND:20261002T120000Z
+SUMMARY:🏀 Estu 80-73 Caja Rural CB Zamora ✅ (J2)
+DESCRIPTION:Primera FEB 26/27 · Jornada 2\\nEstu fuera vs Caja Rural CB Zamora\\nResultado: Estu 80-73 victoria ✅\\nActa FEB: https://baloncestoenvivo.feb.es/Partido.aspx?p=2535742
+URL:https://baloncestoenvivo.feb.es/Partido.aspx?p=2535742
+TRANSP:TRANSPARENT
+STATUS:CONFIRMED
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:estu-2627-j03@estudiantes-calendario
+DTSTAMP:20261015T210206Z
+DTSTART:20261009T100000Z
+DTEND:20261009T120000Z
+SUMMARY:🏀 Estu 106-76 Inveready Askatuak Gipuzkoa ✅ (J3)
+DESCRIPTION:Primera FEB 26/27 · Jornada 3\\nEstu en casa vs Inveready Askatuak Gipuzkoa\\nResultado: Estu 106-76 victoria ✅\\nActa FEB: https://baloncestoenvivo.feb.es/Partido.aspx?p=2535747
+URL:https://baloncestoenvivo.feb.es/Partido.aspx?p=2535747
+LOCATION:Movistar Arena\, Madrid
+TRANSP:TRANSPARENT
+STATUS:CONFIRMED
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:estu-2627-j04@estudiantes-calendario
+DTSTAMP:20261015T210206Z
+DTSTART:20261018T163000Z
+DTEND:20261018T183000Z
+SUMMARY:🏀 Estu vs Iberolea Palencia en casa (J4)
+DESCRIPTION:Primera FEB 26/27 · Jornada 4\\nEstu en casa vs Iberolea Palencia\\nInicio: 18/10/2026 18:30 (Madrid)\\nActa FEB: https://baloncestoenvivo.feb.es/Partido.aspx?p=2535756
+URL:https://baloncestoenvivo.feb.es/Partido.aspx?p=2535756
+LOCATION:Movistar Arena\, Madrid
+TRANSP:TRANSPARENT
+STATUS:CONFIRMED
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:estu-2627-j05@estudiantes-calendario
+DTSTAMP:20261015T210206Z
+DTSTART:20261025T170000Z
+DTEND:20261025T190000Z
+SUMMARY:🏀 Estu vs Fibwi Mallorca Basquet Palma en Fibwi Mallorca Basquet Palma (J5)
+DESCRIPTION:Primera FEB 26/27 · Jornada 5\\nEstu fuera vs Fibwi Mallorca Basquet Palma\\nInicio: 25/10/2026 18:00 (Madrid)\\nActa FEB: https://baloncestoenvivo.feb.es/Partido.aspx?p=2535763
+URL:https://baloncestoenvivo.feb.es/Partido.aspx?p=2535763
+TRANSP:TRANSPARENT
+STATUS:CONFIRMED
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:estu-2627-j06@estudiantes-calendario
+DTSTAMP:20261015T210206Z
+DTSTART:20261101T173000Z
+DTEND:20261101T193000Z
+SUMMARY:🏀 Estu vs Cajasiete Gran Canaria en casa (J6)
+DESCRIPTION:Primera FEB 26/27 · Jornada 6\\nEstu en casa vs Cajasiete Gran Canaria\\nInicio: 01/11/2026 18:30 (Madrid)\\nActa FEB: https://baloncestoenvivo.feb.es/Partido.aspx?p=2535775
+URL:https://baloncestoenvivo.feb.es/Partido.aspx?p=2535775
+LOCATION:Movistar Arena\, Madrid
+TRANSP:TRANSPARENT
+STATUS:CONFIRMED
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:estu-2627-j07@estudiantes-calendario
+DTSTAMP:20261015T210206Z
+DTSTART:20261107T180000Z
+DTEND:20261107T200000Z
+SUMMARY:🏀 Estu vs Grupo Alega Cantabria en Grupo Alega Cantabria (J7)
+DESCRIPTION:Primera FEB 26/27 · Jornada 7\\nEstu fuera vs Grupo Alega Cantabria\\nInicio: 07/11/2026 19:00 (Madrid)\\nActa FEB: https://baloncestoenvivo.feb.es/Partido.aspx?p=2535786
+URL:https://baloncestoenvivo.feb.es/Partido.aspx?p=2535786
+TRANSP:TRANSPARENT
+STATUS:CONFIRMED
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:estu-2627-j08@estudiantes-calendario
+DTSTAMP:20261015T210206Z
+DTSTART:20261114T170000Z
+DTEND:20261114T190000Z
+SUMMARY:🏀 Estu vs Coviran Granada en Coviran Granada (J8)
+DESCRIPTION:Primera FEB 26/27 · Jornada 8\\nEstu fuera vs Coviran Granada\\nInicio: 14/11/2026 18:00 (Madrid)\\nActa FEB: https://baloncestoenvivo.feb.es/Partido.aspx?p=2535793
+URL:https://baloncestoenvivo.feb.es/Partido.aspx?p=2535793
+TRANSP:TRANSPARENT
+STATUS:CONFIRMED
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:estu-2627-j09@estudiantes-calendario
+DTSTAMP:20261015T210206Z
+DTSTART:20261122T110000Z
+DTEND:20261122T130000Z
+SUMMARY:🏀 Estu vs Club Ourense Baloncesto en casa (J9)
+DESCRIPTION:Primera FEB 26/27 · Jornada 9\\nEstu en casa vs Club Ourense Baloncesto\\nInicio: 22/11/2026 12:00 (Madrid)\\nActa FEB: https://baloncestoenvivo.feb.es/Partido.aspx?p=2535799
+URL:https://baloncestoenvivo.feb.es/Partido.aspx?p=2535799
+LOCATION:Movistar Arena\, Madrid
+TRANSP:TRANSPARENT
+STATUS:CONFIRMED
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:estu-2627-j10@estudiantes-calendario
+DTSTAMP:20261015T210206Z
+DTSTART:20261206T173000Z
+DTEND:20261206T193000Z
+SUMMARY:🏀 Estu vs Bueno Arenas Albacete Basket en casa (J10)
+DESCRIPTION:Primera FEB 26/27 · Jornada 10\\nEstu en casa vs Bueno Arenas Albacete Basket\\nInicio: 06/12/2026 18:30 (Madrid)\\nActa FEB: https://baloncestoenvivo.feb.es/Partido.aspx?p=2535812
+URL:https://baloncestoenvivo.feb.es/Partido.aspx?p=2535812
+LOCATION:Movistar Arena\, Madrid
+TRANSP:TRANSPARENT
+STATUS:CONFIRMED
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:estu-2627-j11@estudiantes-calendario
+DTSTAMP:20261015T210206Z
+DTSTART:20261213T170000Z
+DTEND:20261213T190000Z
+SUMMARY:🏀 Estu vs Palmer Basket Mallorca Palma en Palmer Basket Mallorca Palma (J11)
+DESCRIPTION:Primera FEB 26/27 · Jornada 11\\nEstu fuera vs Palmer Basket Mallorca Palma\\nInicio: 13/12/2026 18:00 (Madrid)\\nActa FEB: https://baloncestoenvivo.feb.es/Partido.aspx?p=2535817
+URL:https://baloncestoenvivo.feb.es/Partido.aspx?p=2535817
+TRANSP:TRANSPARENT
+STATUS:CONFIRMED
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:estu-2627-j12@estudiantes-calendario
+DTSTAMP:20261015T210206Z
+DTSTART:20261218T194500Z
+DTEND:20261218T214500Z
+SUMMARY:🏀 Estu vs Grupo Ureta Tizona Burgos en Grupo Ureta Tizona Burgos (J12)
+DESCRIPTION:Primera FEB 26/27 · Jornada 12\\nEstu fuera vs Grupo Ureta Tizona Burgos\\nInicio: 18/12/2026 20:45 (Madrid)\\nActa FEB: https://baloncestoenvivo.feb.es/Partido.aspx?p=2535826
+URL:https://baloncestoenvivo.feb.es/Partido.aspx?p=2535826
+TRANSP:TRANSPARENT
+STATUS:CONFIRMED
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:estu-2627-j13@estudiantes-calendario
+DTSTAMP:20261015T210206Z
+DTSTART:20261227T110000Z
+DTEND:20261227T130000Z
+SUMMARY:🏀 Estu vs Partizán De Fuenlabrada en casa (J13)
+DESCRIPTION:Primera FEB 26/27 · Jornada 13\\nEstu en casa vs Partizán De Fuenlabrada\\nInicio: 27/12/2026 12:00 (Madrid)\\nActa FEB: https://baloncestoenvivo.feb.es/Partido.aspx?p=2535837
+URL:https://baloncestoenvivo.feb.es/Partido.aspx?p=2535837
+LOCATION:Movistar Arena\, Madrid
+TRANSP:TRANSPARENT
+STATUS:CONFIRMED
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:estu-2627-j14@estudiantes-calendario
+DTSTAMP:20261015T210206Z
+DTSTART:20270103T173000Z
+DTEND:20270103T193000Z
+SUMMARY:🏀 Estu vs Bàsquet Menorca en Bàsquet Menorca (J14)
+DESCRIPTION:Primera FEB 26/27 · Jornada 14\\nEstu fuera vs Bàsquet Menorca\\nInicio: 03/01/2027 18:30 (Madrid)\\nActa FEB: https://baloncestoenvivo.feb.es/Partido.aspx?p=2535844
+URL:https://baloncestoenvivo.feb.es/Partido.aspx?p=2535844
+TRANSP:TRANSPARENT
+STATUS:CONFIRMED
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:estu-2627-j15@estudiantes-calendario
+DTSTAMP:20261015T210206Z
+DTSTART:20270110T173000Z
+DTEND:20270110T193000Z
+SUMMARY:🏀 Estu vs Hla Alicante en casa (J15)
+DESCRIPTION:Primera FEB 26/27 · Jornada 15\\nEstu en casa vs Hla Alicante\\nInicio: 10/01/2027 18:30 (Madrid)\\nActa FEB: https://baloncestoenvivo.feb.es/Partido.aspx?p=2535855
+URL:https://baloncestoenvivo.feb.es/Partido.aspx?p=2535855
+LOCATION:Movistar Arena\, Madrid
+TRANSP:TRANSPARENT
+STATUS:CONFIRMED
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:estu-2627-j16@estudiantes-calendario
+DTSTAMP:20261015T210206Z
+DTSTART:20270113T193000Z
+DTEND:20270113T213000Z
+SUMMARY:🏀 Estu vs Alimerka Oviedo Baloncesto en Alimerka Oviedo Baloncesto (J16)
+DESCRIPTION:Primera FEB 26/27 · Jornada 16\\nEstu fuera vs Alimerka Oviedo Baloncesto\\nInicio: 13/01/2027 20:30 (Madrid)\\nActa FEB: https://baloncestoenvivo.feb.es/Partido.aspx?p=2535866
+URL:https://baloncestoenvivo.feb.es/Partido.aspx?p=2535866
+TRANSP:TRANSPARENT
+STATUS:CONFIRMED
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:estu-2627-j17@estudiantes-calendario
+DTSTAMP:20261015T210206Z
+DTSTART:20270117T110000Z
+DTEND:20270117T130000Z
+SUMMARY:🏀 Estu vs Cajasol Coto Córdoba en casa (J17)
+DESCRIPTION:Primera FEB 26/27 · Jornada 17\\nEstu en casa vs Cajasol Coto Córdoba\\nInicio: 17/01/2027 12:00 (Madrid)\\nActa FEB: https://baloncestoenvivo.feb.es/Partido.aspx?p=2535874
+URL:https://baloncestoenvivo.feb.es/Partido.aspx?p=2535874
+LOCATION:Movistar Arena\, Madrid
+TRANSP:TRANSPARENT
+STATUS:CONFIRMED
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:estu-2627-j18@estudiantes-calendario
+DTSTAMP:20261015T210206Z
+DTSTART:20270131T110000Z
+DTEND:20270131T130000Z
+SUMMARY:🏀 Estu vs Palmer Basket Mallorca Palma en casa (J18)
+DESCRIPTION:Primera FEB 26/27 · Jornada 18\\nEstu en casa vs Palmer Basket Mallorca Palma\\nInicio: 31/01/2027 12:00 (Madrid)\\nActa FEB: https://baloncestoenvivo.feb.es/Partido.aspx?p=2535881
+URL:https://baloncestoenvivo.feb.es/Partido.aspx?p=2535881
+LOCATION:Movistar Arena\, Madrid
+TRANSP:TRANSPARENT
+STATUS:CONFIRMED
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:estu-2627-j19@estudiantes-calendario
+DTSTAMP:20261015T210206Z
+DTSTART:20270206T190000Z
+DTEND:20270206T210000Z
+SUMMARY:🏀 Estu vs Cajasiete Gran Canaria en Cajasiete Gran Canaria (J19)
+DESCRIPTION:Primera FEB 26/27 · Jornada 19\\nEstu fuera vs Cajasiete Gran Canaria\\nInicio: 06/02/2027 20:00 (Madrid)\\nActa FEB: https://baloncestoenvivo.feb.es/Partido.aspx?p=2535894
+URL:https://baloncestoenvivo.feb.es/Partido.aspx?p=2535894
+TRANSP:TRANSPARENT
+STATUS:CONFIRMED
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:estu-2627-j20@estudiantes-calendario
+DTSTAMP:20261015T210206Z
+DTSTART:20270210T190000Z
+DTEND:20270210T210000Z
+SUMMARY:🏀 Estu vs Bàsquet Menorca en casa (J20)
+DESCRIPTION:Primera FEB 26/27 · Jornada 20\\nEstu en casa vs Bàsquet Menorca\\nInicio: 10/02/2027 20:00 (Madrid)\\nActa FEB: https://baloncestoenvivo.feb.es/Partido.aspx?p=2535901
+URL:https://baloncestoenvivo.feb.es/Partido.aspx?p=2535901
+LOCATION:Movistar Arena\, Madrid
+TRANSP:TRANSPARENT
+STATUS:CONFIRMED
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:estu-2627-j21@estudiantes-calendario
+DTSTAMP:20261015T210206Z
+DTSTART:20270214T113000Z
+DTEND:20270214T133000Z
+SUMMARY:🏀 Estu vs Insolac Caja 87 en Insolac Caja 87 (J21)
+DESCRIPTION:Primera FEB 26/27 · Jornada 21\\nEstu fuera vs Insolac Caja 87\\nInicio: 14/02/2027 12:30 (Madrid)\\nActa FEB: https://baloncestoenvivo.feb.es/Partido.aspx?p=2535913
+URL:https://baloncestoenvivo.feb.es/Partido.aspx?p=2535913
+TRANSP:TRANSPARENT
+STATUS:CONFIRMED
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:estu-2627-j22@estudiantes-calendario
+DTSTAMP:20261015T210206Z
+DTSTART:20270219T200000Z
+DTEND:20270219T220000Z
+SUMMARY:🏀 Estu vs Iberolea Palencia en Iberolea Palencia (J22)
+DESCRIPTION:Primera FEB 26/27 · Jornada 22\\nEstu fuera vs Iberolea Palencia\\nInicio: 19/02/2027 21:00 (Madrid)\\nActa FEB: https://baloncestoenvivo.feb.es/Partido.aspx?p=2535919
+URL:https://baloncestoenvivo.feb.es/Partido.aspx?p=2535919
+TRANSP:TRANSPARENT
+STATUS:CONFIRMED
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:estu-2627-j23@estudiantes-calendario
+DTSTAMP:20261015T210206Z
+DTSTART:20270307T110000Z
+DTEND:20270307T130000Z
+SUMMARY:🏀 Estu vs Caja Rural CB Zamora en casa (J23)
+DESCRIPTION:Primera FEB 26/27 · Jornada 23\\nEstu en casa vs Caja Rural CB Zamora\\nInicio: 07/03/2027 12:00 (Madrid)\\nActa FEB: https://baloncestoenvivo.feb.es/Partido.aspx?p=2535928
+URL:https://baloncestoenvivo.feb.es/Partido.aspx?p=2535928
+LOCATION:Movistar Arena\, Madrid
+TRANSP:TRANSPARENT
+STATUS:CONFIRMED
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:estu-2627-j24@estudiantes-calendario
+DTSTAMP:20261015T210206Z
+DTSTART:20270310T194500Z
+DTEND:20270310T214500Z
+SUMMARY:🏀 Estu vs Hla Alicante en Hla Alicante (J24)
+DESCRIPTION:Primera FEB 26/27 · Jornada 24\\nEstu fuera vs Hla Alicante\\nInicio: 10/03/2027 20:45 (Madrid)\\nActa FEB: https://baloncestoenvivo.feb.es/Partido.aspx?p=2535933
+URL:https://baloncestoenvivo.feb.es/Partido.aspx?p=2535933
+TRANSP:TRANSPARENT
+STATUS:CONFIRMED
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:estu-2627-j25@estudiantes-calendario
+DTSTAMP:20261015T210206Z
+DTSTART:20270314T110000Z
+DTEND:20270314T130000Z
+SUMMARY:🏀 Estu vs Coviran Granada en casa (J25)
+DESCRIPTION:Primera FEB 26/27 · Jornada 25\\nEstu en casa vs Coviran Granada\\nInicio: 14/03/2027 12:00 (Madrid)\\nActa FEB: https://baloncestoenvivo.feb.es/Partido.aspx?p=2535946
+URL:https://baloncestoenvivo.feb.es/Partido.aspx?p=2535946
+LOCATION:Movistar Arena\, Madrid
+TRANSP:TRANSPARENT
+STATUS:CONFIRMED
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:estu-2627-j26@estudiantes-calendario
+DTSTAMP:20261015T210206Z
+DTSTART:20270320T180000Z
+DTEND:20270320T200000Z
+SUMMARY:🏀 Estu vs Bueno Arenas Albacete Basket en Bueno Arenas Albacete Basket (J26)
+DESCRIPTION:Primera FEB 26/27 · Jornada 26\\nEstu fuera vs Bueno Arenas Albacete Basket\\nInicio: 20/03/2027 19:00 (Madrid)\\nActa FEB: https://baloncestoenvivo.feb.es/Partido.aspx?p=2535950
+URL:https://baloncestoenvivo.feb.es/Partido.aspx?p=2535950
+TRANSP:TRANSPARENT
+STATUS:CONFIRMED
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:estu-2627-j27@estudiantes-calendario
+DTSTAMP:20261015T210206Z
+DTSTART:20270328T100000Z
+DTEND:20270328T120000Z
+SUMMARY:🏀 Estu vs Grupo Alega Cantabria en casa (J27)
+DESCRIPTION:Primera FEB 26/27 · Jornada 27\\nEstu en casa vs Grupo Alega Cantabria\\nInicio: 28/03/2027 12:00 (Madrid)\\nActa FEB: https://baloncestoenvivo.feb.es/Partido.aspx?p=2535964
+URL:https://baloncestoenvivo.feb.es/Partido.aspx?p=2535964
+LOCATION:Movistar Arena\, Madrid
+TRANSP:TRANSPARENT
+STATUS:CONFIRMED
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:estu-2627-j28@estudiantes-calendario
+DTSTAMP:20261015T210206Z
+DTSTART:20270403T163000Z
+DTEND:20270403T183000Z
+SUMMARY:🏀 Estu vs Partizán De Fuenlabrada en Partizán De Fuenlabrada (J28)
+DESCRIPTION:Primera FEB 26/27 · Jornada 28\\nEstu fuera vs Partizán De Fuenlabrada\\nInicio: 03/04/2027 18:30 (Madrid)\\nActa FEB: https://baloncestoenvivo.feb.es/Partido.aspx?p=2535972
+URL:https://baloncestoenvivo.feb.es/Partido.aspx?p=2535972
+TRANSP:TRANSPARENT
+STATUS:CONFIRMED
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:estu-2627-j29@estudiantes-calendario
+DTSTAMP:20261015T210206Z
+DTSTART:20270411T160000Z
+DTEND:20270411T180000Z
+SUMMARY:🏀 Estu vs Inveready Askatuak Gipuzkoa en Inveready Askatuak Gipuzkoa (J29)
+DESCRIPTION:Primera FEB 26/27 · Jornada 29\\nEstu fuera vs Inveready Askatuak Gipuzkoa\\nInicio: 11/04/2027 18:00 (Madrid)\\nActa FEB: https://baloncestoenvivo.feb.es/Partido.aspx?p=2535982
+URL:https://baloncestoenvivo.feb.es/Partido.aspx?p=2535982
+TRANSP:TRANSPARENT
+STATUS:CONFIRMED
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:estu-2627-j30@estudiantes-calendario
+DTSTAMP:20261015T210206Z
+DTSTART:20270418T163000Z
+DTEND:20270418T183000Z
+SUMMARY:🏀 Estu vs Grupo Ureta Tizona Burgos en casa (J30)
+DESCRIPTION:Primera FEB 26/27 · Jornada 30\\nEstu en casa vs Grupo Ureta Tizona Burgos\\nInicio: 18/04/2027 18:30 (Madrid)\\nActa FEB: https://baloncestoenvivo.feb.es/Partido.aspx?p=2535989
+URL:https://baloncestoenvivo.feb.es/Partido.aspx?p=2535989
+LOCATION:Movistar Arena\, Madrid
+TRANSP:TRANSPARENT
+STATUS:CONFIRMED
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:estu-2627-j31@estudiantes-calendario
+DTSTAMP:20261015T210206Z
+DTSTART:20270421T180000Z
+DTEND:20270421T200000Z
+SUMMARY:🏀 Estu vs Fibwi Mallorca Basquet Palma en casa (J31)
+DESCRIPTION:Primera FEB 26/27 · Jornada 31\\nEstu en casa vs Fibwi Mallorca Basquet Palma\\nInicio: 21/04/2027 20:00 (Madrid)\\nActa FEB: https://baloncestoenvivo.feb.es/Partido.aspx?p=2536001
+URL:https://baloncestoenvivo.feb.es/Partido.aspx?p=2536001
+LOCATION:Movistar Arena\, Madrid
+TRANSP:TRANSPARENT
+STATUS:CONFIRMED
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:estu-2627-j32@estudiantes-calendario
+DTSTAMP:20261015T210206Z
+DTSTART:20270424T170000Z
+DTEND:20270424T190000Z
+SUMMARY:🏀 Estu vs Club Ourense Baloncesto en Club Ourense Baloncesto (J32)
+DESCRIPTION:Primera FEB 26/27 · Jornada 32\\nEstu fuera vs Club Ourense Baloncesto\\nInicio: 24/04/2027 19:00 (Madrid)\\nActa FEB: https://baloncestoenvivo.feb.es/Partido.aspx?p=2536009
+URL:https://baloncestoenvivo.feb.es/Partido.aspx?p=2536009
+TRANSP:TRANSPARENT
+STATUS:CONFIRMED
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:estu-2627-j33@estudiantes-calendario
+DTSTAMP:20261015T210206Z
+DTSTART:20270502T163000Z
+DTEND:20270502T183000Z
+SUMMARY:🏀 Estu vs Alimerka Oviedo Baloncesto en casa (J33)
+DESCRIPTION:Primera FEB 26/27 · Jornada 33\\nEstu en casa vs Alimerka Oviedo Baloncesto\\nInicio: 02/05/2027 18:30 (Madrid)\\nActa FEB: https://baloncestoenvivo.feb.es/Partido.aspx?p=2536018
+URL:https://baloncestoenvivo.feb.es/Partido.aspx?p=2536018
+LOCATION:Movistar Arena\, Madrid
+TRANSP:TRANSPARENT
+STATUS:CONFIRMED
+SEQUENCE:0
+END:VEVENT
+BEGIN:VEVENT
+UID:estu-2627-j34@estudiantes-calendario
+DTSTAMP:20261015T210206Z
+DTSTART:20270507T190000Z
+DTEND:20270507T210000Z
+SUMMARY:🏀 Estu vs Cajasol Coto Córdoba en Cajasol Coto Córdoba (J34)
+DESCRIPTION:Primera FEB 26/27 · Jornada 34\\nEstu fuera vs Cajasol Coto Córdoba\\nInicio: 07/05/2027 21:00 (Madrid)\\nActa FEB: https://baloncestoenvivo.feb.es/Partido.aspx?p=2536024
+URL:https://baloncestoenvivo.feb.es/Partido.aspx?p=2536024
+TRANSP:TRANSPARENT
+STATUS:CONFIRMED
+SEQUENCE:0
+END:VEVENT
+END:VCALENDAR
