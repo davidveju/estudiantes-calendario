@@ -13,6 +13,7 @@ from pathlib import Path
 
 BASE = Path(__file__).resolve().parent
 JSON_PATH = BASE / "datos" / "partidos.json"
+SEDES_PATH = BASE / "datos" / "sedes.json"
 ICS_PATH = BASE / "estudiantes.ics"
 FEB_URL = "https://competiciones.feb.es/estadisticas/Calendario.aspx"
 ESTU_ID = "1010493"
@@ -27,12 +28,32 @@ def fetch() -> str:
     return urllib.request.urlopen(req, timeout=60).read().decode("utf-8", "replace")
 
 
+def fetch_sede(pid: str) -> dict:
+    """Pabellón + dirección desde la ficha del partido (verificado J1/J4/J5/J34)."""
+    import time
+    req = urllib.request.Request(
+        f"https://baloncestoenvivo.feb.es/Partido.aspx?p={pid}",
+        headers={"User-Agent": "Mozilla/5.0"})
+    h = urllib.request.urlopen(req, timeout=30).read().decode("utf-8", "replace")
+    time.sleep(1)
+    m = re.search(r'<div class="pista">(.*?)</div>\s*</div>', h, re.S)
+    if not m:
+        return {}
+    pab = re.search(r'class="txt pabellon">(.*?)</span>', m.group(1))
+    drc = re.search(r'class="txt direccion">(.*?)</span>', m.group(1))
+    return {"pabellon": title_case(pab.group(1)) if pab else "",
+            "direccion": drc.group(1).strip() if drc else ""}
+
+
 def title_case(s: str) -> str:
-    s = s.strip().lower()
+    minus = {"de", "del", "la", "el", "los", "las", "en", "y", "a", "al"}
+    siglas = {"cb", "cd", "ad", "sd", "xb", "alb", "bca"}
     out = []
-    for w in s.split():
-        if w in ("cb", "cd", "ad", "sd", "xb"):
+    for i, w in enumerate(s.strip().lower().split()):
+        if w in siglas:
             out.append(w.upper())
+        elif w in minus and i > 0:
+            out.append(w)
         else:
             out.append(w[:1].upper() + w[1:])
     return " ".join(out)
@@ -103,6 +124,11 @@ def descripcion(p: dict) -> str:
     return "\\n".join(lineas)
 
 
+def sede_txt(p: dict) -> str:
+    s = p.get("sede") or {}
+    return ", ".join(x for x in (s.get("pabellon"), s.get("direccion")) if x)
+
+
 def esc(s: str) -> str:
     return s.replace("\\", "\\\\").replace(";", "\\;").replace(",", "\\,").replace("\n", "\\n")
 
@@ -130,8 +156,9 @@ def to_ics(partidos: list[dict]) -> str:
               f"SUMMARY:{esc(resumen(p))}",
               f"DESCRIPTION:{esc(descripcion(p))}",
               f"URL:{p['acta']}"]
-        if p["casa"]:
-            L.append(f"LOCATION:{esc(CASA_PABELLON)}")
+        loc = sede_txt(p) or (CASA_PABELLON if p["casa"] else "")
+        if loc:
+            L.append(f"LOCATION:{esc(loc)}")
         L += ["TRANSP:TRANSPARENT", "STATUS:CONFIRMED", "SEQUENCE:0", "END:VEVENT"]
     L.append("END:VCALENDAR")
     return "\r\n".join(L) + "\r\n"
@@ -150,6 +177,21 @@ def main() -> None:
                 if p["casa"]:
                     pass
     JSON_PATH.parent.mkdir(parents=True, exist_ok=True)
+    JSON_PATH.write_text(json.dumps(partidos, ensure_ascii=False, indent=2) + "\n")
+    # sedes: caché por partido (la ficha FEB ya trae pabellón de los 34)
+    sedes = json.loads(SEDES_PATH.read_text()) if SEDES_PATH.exists() else {}
+    for p in partidos:
+        if p["feb_partido_id"] not in sedes:
+            try:
+                sedes[p["feb_partido_id"]] = fetch_sede(p["feb_partido_id"])
+                print(f"sede J{p['jornada']}: {sedes[p['feb_partido_id']]}")
+            except Exception as e:
+                print(f"sede J{p['jornada']}: ERROR {e}")
+                sedes[p["feb_partido_id"]] = sedes.get(p["feb_partido_id"], {})
+    SEDES_PATH.write_text(json.dumps(sedes, ensure_ascii=False, indent=2) + "\n")
+    for p in partidos:
+        if sedes.get(p["feb_partido_id"]):
+            p["sede"] = sedes[p["feb_partido_id"]]
     JSON_PATH.write_text(json.dumps(partidos, ensure_ascii=False, indent=2) + "\n")
     ICS_PATH.write_text(to_ics(partidos))
     jug = sum(1 for p in partidos if p["estado"] == "jugado")

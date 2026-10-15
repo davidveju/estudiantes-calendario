@@ -12,7 +12,11 @@
     "resultado_visitante": 65,
     "resultado_estu": 78,
     "resultado_rival": 65,
-    "victoria": true
+    "victoria": true,
+    "sede": {
+      "pabellon": "Movistar Arena",
+      "direccion": "Madrid (Madrid)"
+    }
   },
   {
     "jornada": 2,
@@ -27,7 +31,11 @@
     "resultado_visitante": 80,
     "resultado_estu": 80,
     "resultado_rival": 73,
-    "victoria": true
+    "victoria": true,
+    "sede": {
+      "pabellon": "Pabellon Angel Nieto",
+      "direccion": "Zamora (Zamora)"
+    }
   },
   {
     "jornada": 3,
@@ -42,7 +50,11 @@
     "resultado_visitante": 76,
     "resultado_estu": 106,
     "resultado_rival": 76,
-    "victoria": true
+    "victoria": true,
+    "sede": {
+      "pabellon": "Movistar Arena",
+      "direccion": "Madrid (Madrid)"
+    }
   },
   {
     "jornada": 4,
@@ -53,7 +65,11 @@
     "feb_partido_id": "2535756",
     "acta": "https://baloncestoenvivo.feb.es/Partido.aspx?p=2535756",
     "estado": "pendiente",
-    "inicio_madrid": "2026-10-18T18:30:00"
+    "inicio_madrid": "2026-10-18T18:30:00",
+    "sede": {
+      "pabellon": "Movistar Arena",
+      "direccion": "Madrid (Madrid)"
+    }
   },
   {
     "jornada": 5,
@@ -64,7 +80,11 @@
     "feb_partido_id": "2535763",
     "acta": "https://baloncestoenvivo.feb.es/Partido.aspx?p=2535763",
     "estado": "pendiente",
-    "inicio_madrid": "2026-10-25T18:00:00"
+    "inicio_madrid": "2026-10-25T18:00:00",
+    "sede": {
+      "pabellon": "Polideportivo de Son Moix",
+      "direccion": "Palma de Mallorca (Illes Balears)"
+    }
   },
   {
     "jornada": 6,
@@ -75,7 +95,11 @@
     "feb_partido_id": "2535775",
     "acta": "https://baloncestoenvivo.feb.es/Partido.aspx?p=2535775",
     "estado": "pendiente",
-    "inicio_madrid": "2026-11-01T18:30:00"
+    "inicio_madrid": "2026-11-01T18:30:00",
+    "sede": {
+      "pabellon": "Movistar Arena",
+      "direccion": "Madrid (Madrid)"
+    }
   },
   {
     "jornada": 7,
@@ -86,7 +110,11 @@
     "feb_partido_id": "2535786",
     "acta": "https://baloncestoenvivo.feb.es/Partido.aspx?p=2535786",
     "estado": "pendiente",
-    "inicio_madrid": "2026-11-07T19:00:00"
+    "inicio_madrid": "2026-11-07T19:00:00",
+    "sede": {
+      "pabellon": "Pabellón Vicente Trueba",
+      "direccion": "Torrelavega (Cantabria)"
+    }
   },
   {
     "jornada": 8,
@@ -97,7 +125,11 @@
     "feb_partido_id": "2535793",
     "acta": "https://baloncestoenvivo.feb.es/Partido.aspx?p=2535793",
     "estado": "pendiente",
-    "inicio_madrid": "2026-11-14T18:00:00"
+    "inicio_madrid": "2026-11-14T18:00:00",
+    "sede": {
+      "pabellon": "Palacio Deportes Granada",
+      "direccion": "Granada (Granada)"
+    }
   },
   {
     "jornada": 9,
@@ -108,7 +140,11 @@
     "feb_partido_id": "2535799",
     "acta": "https://baloncestoenvivo.feb.es/Partido.aspx?p=2535799",
     "estado": "pendiente",
-    "inicio_madrid": "2026-11-22T12:00:00"
+    "inicio_madrid": "2026-11-22T12:00:00",
+    "sede": {
+      "pabellon": "Movistar Arena",
+      "direccion": "Madrid (Madrid)"
+    }
   },
   {
     "jornada": 10,
@@ -119,7 +155,11 @@
     "feb_partido_id": "2535812",
     "acta": "https://baloncestoenvivo.feb.es/Partido.aspx?p=2535812",
     "estado": "pendiente",
-    "inicio_madrid": "2026-12-06T18:30:00"
+    "inicio_madrid": "2026-12-06T18:30:00",
+    "sede": {
+      "pabellon": "Movistar Arena",
+      "direccion": "Madrid (Madrid)"
+    }
   },
   {
     "jornada": 11,
@@ -130,7 +170,11 @@
     "feb_partido_id": "2535817",
     "acta": "https://baloncestoenvivo.feb.es/Partido.aspx?p=2535817",
     "estado": "pendiente",
-    "inicio_madrid": "2026-12-13T18:00:00"
+    "inicio_madrid": "2026-12-13T18:00:00",
+    "sede": {
+      "pabellon": "Poliesportiu Son Moix",
+      "direccion": "Palma de Mallorca (Illes Balears)"
+    }
   },
   {
     "jornada": 12,
@@ -141,18 +185,26 @@
     "feb_partido_id": "2535826",
     "acta": "https://baloncestoenvivo.feb.es/Partido.aspx?p=2535826",
     "estado": "pendiente",
-    "inicio_madrid": "2026-12-18T20:45:00"
+    "inicio_madrid": "2026-12-18T20:45:00",
+    "sede": {
+      "pabellon": "Polideportivo Municipal el Plantio",
+      "direccion": "Burgos (Burgos)"
+    }
   },
   {
     "jornada": 13,
     "fecha_jornada": "27/12/2026",
     "uid": "estu-2627-j13@estudiantes-calendario",
     "casa": true,
-    "rival": "Partizán De Fuenlabrada",
+    "rival": "Partizán de Fuenlabrada",
     "feb_partido_id": "2535837",
     "acta": "https://baloncestoenvivo.feb.es/Partido.aspx?p=2535837",
     "estado": "pendiente",
-    "inicio_madrid": "2026-12-27T12:00:00"
+    "inicio_madrid": "2026-12-27T12:00:00",
+    "sede": {
+      "pabellon": "Movistar Arena",
+      "direccion": "Madrid (Madrid)"
+    }
   },
   {
     "jornada": 14,
@@ -163,7 +215,11 @@
     "feb_partido_id": "2535844",
     "acta": "https://baloncestoenvivo.feb.es/Partido.aspx?p=2535844",
     "estado": "pendiente",
-    "inicio_madrid": "2027-01-03T18:30:00"
+    "inicio_madrid": "2027-01-03T18:30:00",
+    "sede": {
+      "pabellon": "Pavelló Menorca",
+      "direccion": "Mahón (Illes Balears)"
+    }
   },
   {
     "jornada": 15,
@@ -174,7 +230,11 @@
     "feb_partido_id": "2535855",
     "acta": "https://baloncestoenvivo.feb.es/Partido.aspx?p=2535855",
     "estado": "pendiente",
-    "inicio_madrid": "2027-01-10T18:30:00"
+    "inicio_madrid": "2027-01-10T18:30:00",
+    "sede": {
+      "pabellon": "Movistar Arena",
+      "direccion": "Madrid (Madrid)"
+    }
   },
   {
     "jornada": 16,
@@ -185,7 +245,11 @@
     "feb_partido_id": "2535866",
     "acta": "https://baloncestoenvivo.feb.es/Partido.aspx?p=2535866",
     "estado": "pendiente",
-    "inicio_madrid": "2027-01-13T20:30:00"
+    "inicio_madrid": "2027-01-13T20:30:00",
+    "sede": {
+      "pabellon": "Palacio de los Deportes de Oviedo",
+      "direccion": "Oviedo (Asturias)"
+    }
   },
   {
     "jornada": 17,
@@ -196,7 +260,11 @@
     "feb_partido_id": "2535874",
     "acta": "https://baloncestoenvivo.feb.es/Partido.aspx?p=2535874",
     "estado": "pendiente",
-    "inicio_madrid": "2027-01-17T12:00:00"
+    "inicio_madrid": "2027-01-17T12:00:00",
+    "sede": {
+      "pabellon": "Movistar Arena",
+      "direccion": "Madrid (Madrid)"
+    }
   },
   {
     "jornada": 18,
@@ -207,7 +275,11 @@
     "feb_partido_id": "2535881",
     "acta": "https://baloncestoenvivo.feb.es/Partido.aspx?p=2535881",
     "estado": "pendiente",
-    "inicio_madrid": "2027-01-31T12:00:00"
+    "inicio_madrid": "2027-01-31T12:00:00",
+    "sede": {
+      "pabellon": "Movistar Academy Magariños",
+      "direccion": "Madrid (Madrid)"
+    }
   },
   {
     "jornada": 19,
@@ -218,7 +290,11 @@
     "feb_partido_id": "2535894",
     "acta": "https://baloncestoenvivo.feb.es/Partido.aspx?p=2535894",
     "estado": "pendiente",
-    "inicio_madrid": "2027-02-06T20:00:00"
+    "inicio_madrid": "2027-02-06T20:00:00",
+    "sede": {
+      "pabellon": "Gran Canaria Arena",
+      "direccion": "Palmas de Gran Canaria, Las (Las Palmas)"
+    }
   },
   {
     "jornada": 20,
@@ -229,7 +305,11 @@
     "feb_partido_id": "2535901",
     "acta": "https://baloncestoenvivo.feb.es/Partido.aspx?p=2535901",
     "estado": "pendiente",
-    "inicio_madrid": "2027-02-10T20:00:00"
+    "inicio_madrid": "2027-02-10T20:00:00",
+    "sede": {
+      "pabellon": "Movistar Academy Magariños",
+      "direccion": "Madrid (Madrid)"
+    }
   },
   {
     "jornada": 21,
@@ -240,7 +320,11 @@
     "feb_partido_id": "2535913",
     "acta": "https://baloncestoenvivo.feb.es/Partido.aspx?p=2535913",
     "estado": "pendiente",
-    "inicio_madrid": "2027-02-14T12:30:00"
+    "inicio_madrid": "2027-02-14T12:30:00",
+    "sede": {
+      "pabellon": "Palacio Deportes San Pablo",
+      "direccion": "Sevilla (Sevilla)"
+    }
   },
   {
     "jornada": 22,
@@ -251,7 +335,11 @@
     "feb_partido_id": "2535919",
     "acta": "https://baloncestoenvivo.feb.es/Partido.aspx?p=2535919",
     "estado": "pendiente",
-    "inicio_madrid": "2027-02-19T21:00:00"
+    "inicio_madrid": "2027-02-19T21:00:00",
+    "sede": {
+      "pabellon": "Pabellón Municipal de Deportes (palencia)",
+      "direccion": "Palencia (Palencia)"
+    }
   },
   {
     "jornada": 23,
@@ -262,7 +350,11 @@
     "feb_partido_id": "2535928",
     "acta": "https://baloncestoenvivo.feb.es/Partido.aspx?p=2535928",
     "estado": "pendiente",
-    "inicio_madrid": "2027-03-07T12:00:00"
+    "inicio_madrid": "2027-03-07T12:00:00",
+    "sede": {
+      "pabellon": "Movistar Arena",
+      "direccion": "Madrid (Madrid)"
+    }
   },
   {
     "jornada": 24,
@@ -273,7 +365,11 @@
     "feb_partido_id": "2535933",
     "acta": "https://baloncestoenvivo.feb.es/Partido.aspx?p=2535933",
     "estado": "pendiente",
-    "inicio_madrid": "2027-03-10T20:45:00"
+    "inicio_madrid": "2027-03-10T20:45:00",
+    "sede": {
+      "pabellon": "Centre de Tecnificació Esportiva D’alacant",
+      "direccion": "Alicante/Alacant (Alicante)"
+    }
   },
   {
     "jornada": 25,
@@ -284,7 +380,11 @@
     "feb_partido_id": "2535946",
     "acta": "https://baloncestoenvivo.feb.es/Partido.aspx?p=2535946",
     "estado": "pendiente",
-    "inicio_madrid": "2027-03-14T12:00:00"
+    "inicio_madrid": "2027-03-14T12:00:00",
+    "sede": {
+      "pabellon": "Movistar Arena",
+      "direccion": "Madrid (Madrid)"
+    }
   },
   {
     "jornada": 26,
@@ -295,7 +395,11 @@
     "feb_partido_id": "2535950",
     "acta": "https://baloncestoenvivo.feb.es/Partido.aspx?p=2535950",
     "estado": "pendiente",
-    "inicio_madrid": "2027-03-20T19:00:00"
+    "inicio_madrid": "2027-03-20T19:00:00",
+    "sede": {
+      "pabellon": "Pabellón del Parque",
+      "direccion": "Albacete (Albacete)"
+    }
   },
   {
     "jornada": 27,
@@ -306,18 +410,26 @@
     "feb_partido_id": "2535964",
     "acta": "https://baloncestoenvivo.feb.es/Partido.aspx?p=2535964",
     "estado": "pendiente",
-    "inicio_madrid": "2027-03-28T12:00:00"
+    "inicio_madrid": "2027-03-28T12:00:00",
+    "sede": {
+      "pabellon": "Movistar Arena",
+      "direccion": "Madrid (Madrid)"
+    }
   },
   {
     "jornada": 28,
     "fecha_jornada": "02/04/2027",
     "uid": "estu-2627-j28@estudiantes-calendario",
     "casa": false,
-    "rival": "Partizán De Fuenlabrada",
+    "rival": "Partizán de Fuenlabrada",
     "feb_partido_id": "2535972",
     "acta": "https://baloncestoenvivo.feb.es/Partido.aspx?p=2535972",
     "estado": "pendiente",
-    "inicio_madrid": "2027-04-03T18:30:00"
+    "inicio_madrid": "2027-04-03T18:30:00",
+    "sede": {
+      "pabellon": "Fernando Martin, Pabellon",
+      "direccion": "Fuenlabrada (Madrid)"
+    }
   },
   {
     "jornada": 29,
@@ -328,7 +440,11 @@
     "feb_partido_id": "2535982",
     "acta": "https://baloncestoenvivo.feb.es/Partido.aspx?p=2535982",
     "estado": "pendiente",
-    "inicio_madrid": "2027-04-11T18:00:00"
+    "inicio_madrid": "2027-04-11T18:00:00",
+    "sede": {
+      "pabellon": "Polideportivo Josean Gasca",
+      "direccion": "Donostia-San Sebastián (Guipúzcoa)"
+    }
   },
   {
     "jornada": 30,
@@ -339,7 +455,11 @@
     "feb_partido_id": "2535989",
     "acta": "https://baloncestoenvivo.feb.es/Partido.aspx?p=2535989",
     "estado": "pendiente",
-    "inicio_madrid": "2027-04-18T18:30:00"
+    "inicio_madrid": "2027-04-18T18:30:00",
+    "sede": {
+      "pabellon": "Movistar Arena",
+      "direccion": "Madrid (Madrid)"
+    }
   },
   {
     "jornada": 31,
@@ -350,7 +470,11 @@
     "feb_partido_id": "2536001",
     "acta": "https://baloncestoenvivo.feb.es/Partido.aspx?p=2536001",
     "estado": "pendiente",
-    "inicio_madrid": "2027-04-21T20:00:00"
+    "inicio_madrid": "2027-04-21T20:00:00",
+    "sede": {
+      "pabellon": "Movistar Arena",
+      "direccion": "Madrid (Madrid)"
+    }
   },
   {
     "jornada": 32,
@@ -361,7 +485,11 @@
     "feb_partido_id": "2536009",
     "acta": "https://baloncestoenvivo.feb.es/Partido.aspx?p=2536009",
     "estado": "pendiente",
-    "inicio_madrid": "2027-04-24T19:00:00"
+    "inicio_madrid": "2027-04-24T19:00:00",
+    "sede": {
+      "pabellon": "Pazo Dos Deportes Paco Paz",
+      "direccion": "Ourense (Ourense)"
+    }
   },
   {
     "jornada": 33,
@@ -372,7 +500,11 @@
     "feb_partido_id": "2536018",
     "acta": "https://baloncestoenvivo.feb.es/Partido.aspx?p=2536018",
     "estado": "pendiente",
-    "inicio_madrid": "2027-05-02T18:30:00"
+    "inicio_madrid": "2027-05-02T18:30:00",
+    "sede": {
+      "pabellon": "Movistar Academy Magariños",
+      "direccion": "Madrid (Madrid)"
+    }
   },
   {
     "jornada": 34,
@@ -383,6 +515,10 @@
     "feb_partido_id": "2536024",
     "acta": "https://baloncestoenvivo.feb.es/Partido.aspx?p=2536024",
     "estado": "pendiente",
-    "inicio_madrid": "2027-05-07T21:00:00"
+    "inicio_madrid": "2027-05-07T21:00:00",
+    "sede": {
+      "pabellon": "Palacio Municipal de Deportes Vista Alegre",
+      "direccion": "Córdoba (Córdoba)"
+    }
   }
 ]
