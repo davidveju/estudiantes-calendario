@@ -15,9 +15,9 @@ concurrency:
 
 jobs:
   update:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04  # pineado: ubuntu-latest migra a la 26 y no queremos sorpresas
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - name: Regenera calendario (solo stdlib)
         run: python3 scripts/scrape.py
       - name: Commit y push si hay cambios
