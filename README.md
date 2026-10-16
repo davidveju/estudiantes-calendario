@@ -6,7 +6,7 @@ los partidos jugados aparecen con el resultado, sin que tengas que hacer nada.
 
 | | |
 |---|---|
-| 📅 Fichero | [`estudiantes.ics`](estudiantes.ics) — 34 jornadas de liga regular |
+| 📅 Fichero | [`estudiantes.ics`](estudiantes.ics) — 34 jornadas de liga + Copa España (y playoffs si se clasifica) |
 | 📡 Fuente | [FEB – Competiciones](https://competiciones.feb.es/estadisticas/Calendario.aspx) |
 | 🔄 Actualización | Automática, lunes y viernes 12:00 UTC (vía GitHub Actions) |
 
@@ -51,7 +51,9 @@ los partidos jugados aparecen con el resultado, sin que tengas que hacer nada.
 ## ⚙️ Cómo funciona
 
 - [`scripts/scrape.py`](scripts/scrape.py) (solo librería estándar de Python, sin dependencias)
-  lee el calendario oficial de la FEB y regenera [`datos/partidos.json`](datos/partidos.json)
+  lee la liga en [competiciones.feb.es](https://competiciones.feb.es/estadisticas/Calendario.aspx)
+  y la Copa en [feb.es](https://www.feb.es/competiciones/resultados/copaespaa/73/2026),
+  y regenera [`datos/partidos.json`](datos/partidos.json)
   y [`estudiantes.ics`](estudiantes.ics), con identificadores estables por jornada
   para que tu calendario actualice cada partido en su sitio, sin duplicados.
 - El workflow [`.github/workflows/update.yml`](.github/workflows/update.yml) lo ejecuta
