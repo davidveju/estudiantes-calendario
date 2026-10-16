@@ -171,7 +171,7 @@ def etiqueta(p: dict) -> str:
 
 
 def resumen(p: dict) -> str:
-    emoji = "🏆" if p["competicion"] == "copa" else "🏀"
+    emoji = "🏀"
     tag = etiqueta(p)
     if p["estado"] == "jugado":
         marca = "✅" if p["victoria"] else "❌"
