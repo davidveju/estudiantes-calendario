@@ -175,9 +175,8 @@ def resumen(p: dict) -> str:
     tag = etiqueta(p)
     if p["estado"] == "jugado":
         marca = "✅" if p["victoria"] else "❌"
-        return f"{emoji} Estu {p['resultado_estu']}-{p['resultado_rival']} {p['rival']} {marca} ({tag})"
-    lugar = "en casa" if p["casa"] else "fuera"
-    return f"{emoji} Estu vs {p['rival']} {lugar} ({tag})"
+        return f"{emoji} Estu - {p['rival']} ({tag}: {p['resultado_estu']}-{p['resultado_rival']} {marca})"
+    return f"{emoji} Estu - {p['rival']} ({tag})"
 
 
 def descripcion(p: dict) -> str:
