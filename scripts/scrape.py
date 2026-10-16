@@ -11,7 +11,7 @@ from datetime import datetime, timedelta
 from zoneinfo import ZoneInfo
 from pathlib import Path
 
-BASE = Path(__file__).resolve().parent
+BASE = Path(__file__).resolve().parent.parent  # repo root (script vive en scripts/)
 JSON_PATH = BASE / "datos" / "partidos.json"
 SEDES_PATH = BASE / "datos" / "sedes.json"
 ICS_PATH = BASE / "estudiantes.ics"

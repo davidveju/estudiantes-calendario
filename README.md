@@ -27,5 +27,6 @@ llegan con ese retardo (no vale para seguir el directo).
 
 ## Actualización
 
-`scrape.py` (solo stdlib) regenera `datos/partidos.json` y `estudiantes.ics`
-con UIDs estables por jornada. Cron previsto: lunes y viernes 12:00 UTC.
+`scripts/scrape.py` (solo stdlib) regenera `datos/partidos.json` y `estudiantes.ics`
+con UIDs estables por jornada. Actualización automática con GitHub Actions
+(lun/vie 12:00 UTC); `update.sh` queda como runner manual local.
