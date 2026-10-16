@@ -22,7 +22,7 @@ que hacer nada.
 3. Pega esta URL y pulsa `Añadir calendario`:
 
    ```text
-   https://raw.githubusercontent.com/<TU_USUARIO>/estudiantes-calendario/main/estudiantes.ics
+   https://raw.githubusercontent.com/davidveju/estudiantes-calendario/main/estudiantes.ics
    ```
 
 > Google refresca los calendarios suscritos cada 12–24 h: los horarios y
