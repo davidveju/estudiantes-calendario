@@ -15,7 +15,7 @@
     "resultado_estu": 78,
     "resultado_rival": 65,
     "victoria": true,
-    "inicio_madrid": "2026-09-27T10:00:00",
+    "inicio_madrid": "2026-09-27T12:00:00",
     "sede": {
       "pabellon": "Movistar Arena",
       "direccion": "Madrid (Madrid)"
@@ -37,7 +37,7 @@
     "resultado_estu": 80,
     "resultado_rival": 73,
     "victoria": true,
-    "inicio_madrid": "2026-10-03T17:30:00",
+    "inicio_madrid": "2026-10-03T19:30:00",
     "sede": {
       "pabellon": "Pabellon Angel Nieto",
       "direccion": "Zamora (Zamora)"
@@ -59,7 +59,7 @@
     "resultado_estu": 106,
     "resultado_rival": 76,
     "victoria": true,
-    "inicio_madrid": "2026-10-11T16:30:00",
+    "inicio_madrid": "2026-10-11T18:30:00",
     "sede": {
       "pabellon": "Movistar Arena",
       "direccion": "Madrid (Madrid)"
