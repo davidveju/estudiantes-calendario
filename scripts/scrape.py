@@ -173,10 +173,13 @@ def etiqueta(p: dict) -> str:
 def resumen(p: dict) -> str:
     emoji = "🏆" if p["competicion"] == "copa" else "🏀"
     tag = etiqueta(p)
+    local = "Estu" if p["casa"] else p["rival"]
+    visitante = p["rival"] if p["casa"] else "Estu"
     if p["estado"] == "jugado":
         marca = "✅" if p["victoria"] else "❌"
-        return f"{emoji} Estu - {p['rival']} ({tag}: {p['resultado_estu']}-{p['resultado_rival']} {marca})"
-    return f"{emoji} Estu - {p['rival']} ({tag})"
+        gl, gv = p["resultado_local"], p["resultado_visitante"]
+        return f"{emoji} {local} - {visitante} ({tag}: {gl}-{gv} {marca})"
+    return f"{emoji} {local} - {visitante} ({tag})"
 
 
 def descripcion(p: dict) -> str:

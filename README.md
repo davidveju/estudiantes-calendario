@@ -43,9 +43,9 @@ que hacer nada.
 | Estado | Ejemplo |
 |---|---|
 | Pendiente (liga) | 🏀 Estu - Iberolea Palencia (J4) — hora real de Madrid |
-| Victoria | 🏀 Estu - Askatuak (J3: 106-76 ✅) |
-| Derrota | 🏀 Estu - Rival (J7: 78-85 ❌) |
-| Copa | 🏆 Estu - Coviran Granada (Copa 1/16) |
+| Victoria fuera | 🏀 Caja Rural CB Zamora - Estu (J2: 73-80 ✅) |
+| Derrota | 🏀 Rival - Estu (J7: 85-78 ❌) |
+| Copa | 🏆 Coviran Granada - Estu (Copa 1/16) |
 
 - Cada evento lleva la sede (pabellón + dirección) y el enlace al acta oficial de la FEB.
 - Los partidos no bloquean tu disponibilidad (se marcan como libres).
