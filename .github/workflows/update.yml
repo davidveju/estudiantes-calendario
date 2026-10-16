@@ -18,13 +18,27 @@ jobs:
     runs-on: ubuntu-24.04  # pineado: ubuntu-latest migra a la 26 y no queremos sorpresas
     steps:
       - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0  # historial completo para poder hacer pull --rebase antes del push
       - name: Regenera calendario (solo stdlib)
         run: python3 scripts/scrape.py
-      - name: Commit y push si hay cambios
+      - name: Commit y push si hay cambios reales
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add datos/partidos.json datos/sedes.json estudiantes.ics
-          git diff --cached --quiet && { echo "sin cambios"; exit 0; }
+          # El DTSTAMP cambia en cada ejecucion: si es lo unico que cambia, no hay nada que publicar
+          reales=false
+          if ! git diff --cached --quiet -- datos/; then
+            reales=true
+          elif git diff --cached -U0 -- estudiantes.ics | grep -E '^[+-][^-+]' | grep -v '^[+-]DTSTAMP:' | grep -q .; then
+            reales=true
+          fi
+          if [ "$reales" = false ]; then
+            echo "sin cambios reales (solo DTSTAMP)"
+            git reset -q HEAD -- estudiantes.ics && git checkout -- estudiantes.ics
+            exit 0
+          fi
           git commit -m "auto: actualiza calendario Estu $(date -u +%F)"
+          git pull --rebase origin main
           git push
