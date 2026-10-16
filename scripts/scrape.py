@@ -19,6 +19,7 @@ from pathlib import Path
 BASE = Path(__file__).resolve().parent.parent  # repo root (script vive en scripts/)
 JSON_PATH = BASE / "datos" / "partidos.json"
 SEDES_PATH = BASE / "datos" / "sedes.json"
+FECHAS_PATH = BASE / "datos" / "fechas_reales.json"
 ICS_PATH = BASE / "estudiantes.ics"
 LIGA_URL = "https://competiciones.feb.es/estadisticas/Calendario.aspx"
 COPA_URL = "https://www.feb.es/competiciones/resultados/copaespaa/73/2026"
@@ -249,6 +250,12 @@ def main() -> None:
             old = prev.get(p["uid"])
             if old and p["estado"] == "jugado" and "inicio_madrid" in old:
                 p["inicio_madrid"] = old["inicio_madrid"]
+    # rescates manuales verificados (partidos jugados antes del primer scrape): mandan sobre todo
+    if FECHAS_PATH.exists():
+        seed = json.loads(FECHAS_PATH.read_text())
+        for p in partidos:
+            if p["uid"] in seed and not p["uid"].startswith("_"):
+                p["inicio_madrid"] = seed[p["uid"]]
     JSON_PATH.parent.mkdir(parents=True, exist_ok=True)
     JSON_PATH.write_text(json.dumps(partidos, ensure_ascii=False, indent=2) + "\n")
     # sedes: caché por partido

@@ -3,7 +3,7 @@
 set -u
 cd "$(dirname "$0")/.."  # repo root (este script vive en scripts/)
 python3 scripts/scrape.py || exit 1
-git add datos/partidos.json datos/sedes.json estudiantes.ics 2>/dev/null || exit 0
+git add datos/partidos.json datos/sedes.json datos/fechas_reales.json estudiantes.ics 2>/dev/null || exit 0
 # El DTSTAMP cambia en cada ejecucion: si es lo unico que cambia, no hay nada que publicar
 reales=false
 if ! git diff --cached --quiet -- datos/; then
