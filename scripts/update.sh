@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Regenera el calendario y lo sube a GitHub. Sin remoto configurado solo regenera.
 set -u
-cd "$(dirname "$0")"
+cd "$(dirname "$0")/.."  # repo root (este script vive en scripts/)
 python3 scripts/scrape.py || exit 1
 git add datos/partidos.json datos/sedes.json estudiantes.ics 2>/dev/null || exit 0
 git diff --cached --quiet && { echo "sin cambios"; exit 0; }
