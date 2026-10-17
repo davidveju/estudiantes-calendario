@@ -2,8 +2,8 @@ name: Actualiza calendario Estu
 
 on:
   schedule:
-    # lunes y viernes 12:00 UTC (tras jornada + previa del finde)
-    - cron: "0 12 * * 1,5"
+    # lunes, miércoles y viernes 12:00 UTC (resultados finde + cambios mid-week + previa)
+    - cron: "0 12 * * 1,3,5"
   workflow_dispatch:  # ejecución manual desde la pestaña Actions
 
 permissions:
