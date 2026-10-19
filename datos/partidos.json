@@ -75,7 +75,12 @@
     "rival": "Iberolea Palencia",
     "feb_partido_id": "2535756",
     "acta": "https://baloncestoenvivo.feb.es/Partido.aspx?p=2535756",
-    "estado": "pendiente",
+    "estado": "jugado",
+    "resultado_local": 86,
+    "resultado_visitante": 77,
+    "resultado_estu": 86,
+    "resultado_rival": 77,
+    "victoria": true,
     "inicio_madrid": "2026-10-18T18:30:00",
     "sede": {
       "pabellon": "Movistar Arena",
