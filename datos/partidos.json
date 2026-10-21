@@ -608,8 +608,13 @@
     "rival": "Coviran Granada",
     "feb_partido_id": "2543131",
     "acta": "https://www.feb.es/competiciones/Partido.aspx?p=2543131",
-    "estado": "pendiente",
+    "estado": "jugado",
     "inicio_madrid": "2026-10-20T20:30:00",
+    "resultado_local": 76,
+    "resultado_visitante": 86,
+    "resultado_estu": 86,
+    "resultado_rival": 76,
+    "victoria": true,
     "sede": {
       "pabellon": "Palacio Deportes Granada",
       "direccion": "Granada (Granada)"
