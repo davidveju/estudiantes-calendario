@@ -115,10 +115,9 @@ def fetch_sede(pid: str, retries: int = 2, timeout: int = 15) -> dict:
         except (urllib.error.URLError, TimeoutError, HTTPException, OSError) as e:
             last = e
             log(f"sede pid={pid}: intento {i}/{retries} fallo ({e})")
-            if i < retries:
-                time.sleep(2 * i)
-        finally:
-            time.sleep(1)
+            if _no_reintentable(e) or i >= retries:
+                break
+            time.sleep(2 * i)
     raise ValueError(f"sede pid={pid} fallo tras {retries} intentos ({last})")
 
 
@@ -147,12 +146,39 @@ def title_case(s: str) -> str:
 
 
 def _score(texto: str) -> tuple[int, int] | None:
-    m = re.search(r"(\d+)\s*[-–—]\s*(\d+)", texto)
+    # Evita que una fecha tipo 12-10-2026 se lea como marcador 12-10.
+    m = re.search(r"(?<![\d/.-])(\d{1,3})\s*[-–—]\s*(\d{1,3})(?![\d/.-])", texto)
     return (int(m.group(1)), int(m.group(2))) if m else None
 
 
 def _es_pendiente(texto: str) -> bool:
-    return texto.strip().upper() in PENDIENTE_TXT
+    u = texto.strip().upper()
+    if u in PENDIENTE_TXT:
+        return True
+    # Variantes con hora o texto extra: "Por determinar 19:00", "Aplazado ...".
+    return any(x in u for x in ("POR DETERMINAR", "APLAZ", "SUSPEND", "SUSP.", "PDT"))
+
+
+def _dedup_uid(partidos: list[dict], ambito: str) -> dict[str, dict]:
+    """Un UID por partido. Si la FEB duplica filas, nunca perder un resultado jugado."""
+    por_uid: dict[str, dict] = {}
+    for p in partidos:
+        old = por_uid.get(p["uid"])
+        if old is None:
+            por_uid[p["uid"]] = p
+            continue
+        if old.get("estado") == "jugado" and p.get("estado") != "jugado":
+            warn(f"{ambito}: fila duplicada {p['uid']}; conservo la jugada")
+            continue
+        if p.get("estado") == "jugado" and old.get("estado") != "jugado":
+            if old.get("inicio_madrid") and "inicio_madrid" not in p:
+                p["inicio_madrid"] = old["inicio_madrid"]
+            warn(f"{ambito}: fila duplicada {p['uid']}; uso la jugada")
+        elif old.get("feb_partido_id") != p.get("feb_partido_id"):
+            warn(f"{ambito}: UID duplicado {p['uid']} pids "
+                 f"{old.get('feb_partido_id')} vs {p.get('feb_partido_id')}; me quedo con el ultimo")
+        por_uid[p["uid"]] = p
+    return por_uid
 
 
 def parse_liga(html: str) -> list[dict]:
@@ -205,9 +231,13 @@ def parse_liga(html: str) -> list[dict]:
                 pe, pr = (gl, gv) if casa else (gv, gl)
                 p["resultado_estu"], p["resultado_rival"] = pe, pr
                 p["victoria"] = pe > pr
+                # La FEB borra la hora al publicar el resultado: sin hora conocida,
+                # el evento va a las 12:00 y se marca provisional (TENTATIVE).
+                if "inicio_madrid" not in p:
+                    p["fecha_provisional"] = True
             else:
                 dm = re.search(r"(\d{1,2})[/-](\d{1,2})[/-](\d{4})\s*(?:<br\s*/?>\s*)?(\d{1,2}:\d{2})?",
-                               cell, re.I)
+                               t, re.I)
                 if dm:
                     d, mo, y = int(dm.group(1)), int(dm.group(2)), int(dm.group(3))
                     hhmm = dm.group(4) or "12:00"
@@ -225,34 +255,44 @@ def parse_liga(html: str) -> list[dict]:
                     raise ValueError(f"liga: fecha no parseable J{jnum} pid={pid}: {cell!r} (fila: {snippet[:500]})")
             partidos.append(p)
     # Dedup por UID: la FEB a veces duplica/aplaza filas; nunca emitir duplicados.
-    por_uid: dict[str, dict] = {}
-    for p in partidos:
-        if p["uid"] in por_uid and por_uid[p["uid"]]["feb_partido_id"] != p["feb_partido_id"]:
-            warn(f"liga: UID duplicado {p['uid']} pids "
-                 f"{por_uid[p['uid']]['feb_partido_id']} vs {p['feb_partido_id']}; me quedo con el ultimo")
-        por_uid[p["uid"]] = p
-    partidos = sorted(por_uid.values(), key=lambda p: p["jornada"])
+    partidos = sorted(_dedup_uid(partidos, "liga").values(), key=lambda p: p["jornada"])
     return partidos
+
+
+def _bloque_select(html: str, sufijo_id: str) -> str:
+    """Contenido del <select> cuyo id/name termina en sufijo_id (acotado a su </select>)."""
+    m = re.search(r'<select[^>]*(?:id|name)\s*=\s*["\'][^"\']*' + re.escape(sufijo_id) +
+                  r'[^"\']*["\'][^>]*>(.*?)</select\s*>', html, re.S | re.I)
+    return m.group(1) if m else ""
 
 
 def _grupo_copa(html: str) -> str:
     """Texto del desplegable de grupos seleccionado, ej 'Play-offs 1/8 Final'."""
-    m = re.search(r'gruposDropDownList.*?<option[^>]*\bselected\b[^>]*>(.*?)</option>', html, re.S | re.I)
-    if not m:
+    bloque = _bloque_select(html, "gruposDropDownList")
+    m = re.search(r'<option[^>]*\bselected\b[^>]*>(.*?)</option>', bloque, re.S | re.I)
+    if m:
+        return re.sub(r"\s+", " ", _html.unescape(m.group(1)).replace("\xa0", " ")).strip()
+    opciones = re.findall(r"<option[^>]*>(.*?)</option>", bloque, re.S | re.I)
+    if not opciones:
         return ""
-    return re.sub(r"\s+", " ", _html.unescape(m.group(1)).replace("\xa0", " ")).strip()
+    if len(opciones) > 1:
+        raise ValueError("copa: grupo sin opcion seleccionada y varias opciones; no se sabe la fase")
+    return re.sub(r"\s+", " ", _html.unescape(opciones[0]).replace("\xa0", " ")).strip()
 
 
 def _jornada_copa_seleccionada(html: str) -> tuple[int, str]:
     """(numero, fecha dd/mm/aaaa o '') de la jornada seleccionada en la copa."""
-    m = re.search(r'jornadasDropDownList.*?<option[^>]*\bselected\b[^>]*>\s*Jornada\s+(\d+)\s*'
-                  r'(?:\((\d{1,2}/\d{1,2}/\d{4})\))?', html, re.S | re.I)
+    bloque = _bloque_select(html, "jornadasDropDownList")
+    if not bloque:
+        raise ValueError("copa: no se encontro el desplegable de jornadas (cambio la pagina FEB)")
+    m = re.search(r'<option[^>]*\bselected\b[^>]*>\s*Jornada\s+(\d+)\s*'
+                  r'(?:\((\d{1,2}[/-]\d{1,2}[/-]\d{4})\))?', bloque, re.S | re.I)
     if m:
         return int(m.group(1)), (m.group(2) or "")
     # Fallback: preferir la option marcada como selected, no la menor.
     mejor: tuple[int, str] | None = None
-    for om in re.finditer(r"<option([^>]*)>\s*Jornada\s+(\d+)\s*(?:\((\d{1,2}/\d{1,2}/\d{4})\))?",
-                          html, re.S | re.I):
+    for om in re.finditer(r"<option([^>]*)>\s*Jornada\s+(\d+)\s*(?:\((\d{1,2}[/-]\d{1,2}[/-]\d{4})\))?",
+                          bloque, re.S | re.I):
         attrs, num, fec = om.group(1), int(om.group(2)), (om.group(3) or "")
         if re.search(r"\bselected\b", attrs, re.I):
             return num, fec
@@ -277,12 +317,8 @@ def _ronda_copa(grupo_txt: str, jnum_fallback: int) -> tuple[str, int]:
         return "Semifinal", RONDA_A_JNUM["Semifinal"]
     if "FINAL" in g:
         return "Final", RONDA_A_JNUM["Final"]
-    if not grupo_txt.strip():
-        # Sin grupo no se inventa ronda: evita colisionar con el historico real.
-        warn(f"copa: sin grupo en el HTML, uso J{jnum_fallback} sin mapear a ronda")
-        return f"J{jnum_fallback}", jnum_fallback
-    warn(f"copa: grupo no reconocido ({grupo_txt!r}), uso J{jnum_fallback} como ronda")
-    return RONDAS_COPA.get(jnum_fallback, f"J{jnum_fallback}"), jnum_fallback
+    # Sin ronda fiable no se inventa un UID: J1 colisionaria con el 1/16 historico.
+    raise ValueError(f"copa: grupo no reconocido ({grupo_txt!r}) en J{jnum_fallback}; no se puede asignar ronda")
 
 
 def _celdas(r: str) -> list[str]:
@@ -320,8 +356,8 @@ def parse_copa(html: str) -> list[dict]:
         res_txt = _limpia(rs.group(2))
         celdas = _celdas(r)
         fecha_raw = next((c for c in celdas
-                          if re.fullmatch(r"\d{1,2}/\d{1,2}/\d{4}", c)
-                          or c.upper() == "POR DETERMINAR"), "")
+                          if re.fullmatch(r"\d{1,2}[/-]\d{1,2}[/-]\d{4}", c)
+                          or c.upper().startswith("POR DETERMINAR")), "")
         hora_m = next((re.search(r"(\d{1,2}:\d{2})", c) for c in celdas
                        if re.search(r"\d{1,2}:\d{2}", c)), None)
         hora_raw = hora_m.group(1) if hora_m else ""
@@ -331,7 +367,7 @@ def parse_copa(html: str) -> list[dict]:
         score = _score(res_txt)
         if not (score or _es_pendiente(res_txt)):
             warn(f"copa: resultado desconocido pid={pid}: {res_txt!r}; se trata como pendiente")
-        tbd = (fecha_raw.upper() == "POR DETERMINAR")
+        tbd = fecha_raw.upper().startswith("POR DETERMINAR")
         fecha_jornada = fecha_dropdown or ("" if tbd else fecha_raw)
         if not fecha_jornada and tbd:
             warn(f"copa: {ronda} pid={pid} sin fecha ni fecha de jornada, se crea sin inicio")
@@ -351,12 +387,12 @@ def parse_copa(html: str) -> list[dict]:
         }
         if tbd:
             if fecha_dropdown:
-                d, mo, y = map(int, fecha_dropdown.split("/"))
+                d, mo, y = map(int, re.split(r"[/-]", fecha_dropdown))
                 p["inicio_madrid"] = f"{y:04d}-{mo:02d}-{d:02d}T12:00:00"
                 p["fecha_provisional"] = True
             # else: sin inicio_madrid; to_ics/descripcion lo gestionan
         else:
-            d, mo, y = map(int, fecha_raw.split("/"))
+            d, mo, y = map(int, re.split(r"[/-]", fecha_raw))
             hh, mm = map(int, (hora_raw or "12:00").split(":"))
             p["inicio_madrid"] = f"{y:04d}-{mo:02d}-{d:02d}T{hh:02d}:{mm:02d}:00"
             if not hora_raw:
@@ -370,11 +406,7 @@ def parse_copa(html: str) -> list[dict]:
         partidos.append(p)
     if not partidos:
         warn("copa: el Estu no aparece en la fase actual (eliminado o fase nueva sin publicar); se conserva el historico")
-    por_uid: dict[str, dict] = {}
-    for p in partidos:
-        if p["uid"] in por_uid and por_uid[p["uid"]]["feb_partido_id"] != p["feb_partido_id"]:
-            warn(f"copa: UID duplicado {p['uid']}; me quedo con el ultimo")
-        por_uid[p["uid"]] = p
+    por_uid = _dedup_uid(partidos, "copa")
     return list(por_uid.values())
 
 
@@ -407,7 +439,7 @@ def descripcion(p: dict) -> str:
         dt_raw = p.get("inicio_madrid") or ""
         try:
             dt = datetime.fromisoformat(dt_raw) if dt_raw else None
-        except ValueError:
+        except (TypeError, ValueError):
             dt = None
         if dt is not None:
             if p.get("fecha_provisional"):
@@ -416,7 +448,7 @@ def descripcion(p: dict) -> str:
                 lineas.append(f"Inicio: {dt.strftime('%d/%m/%Y %H:%M')} (Madrid)")
         else:
             fj = p.get("fecha_jornada", "")
-            if re.match(r"\d{1,2}/\d{1,2}/\d{4}", fj or ""):
+            if re.match(r"\d{1,2}[/-]\d{1,2}[/-]\d{4}", str(fj or "")):
                 lineas.append(f"Fecha por determinar (semana del {fj}, por confirmar FEB)")
             else:
                 lineas.append("Fecha por determinar (por confirmar FEB)")
@@ -433,24 +465,33 @@ def esc(s: str) -> str:
     return s.replace("\\", "\\\\").replace(";", "\\;").replace(",", "\\,").replace("\n", "\\n")
 
 
+def _prefijo_utf8(raw: bytes, limite: int) -> int:
+    """Mayor corte <= limite que termina en un caracter UTF-8 completo."""
+    corte = min(limite, len(raw))
+    for k in range(corte, max(corte - 4, -1), -1):
+        try:
+            raw[:k].decode("utf-8")
+            return k
+        except UnicodeDecodeError:
+            continue
+    raise ValueError("fold_line: bytes UTF-8 invalidos")
+
+
 def fold_line(line: str, limit: int = 75) -> str:
     """Pliega una linea ICS por octetos UTF-8 (RFC 5545 §3.1) sin partir multibyte."""
+    if limit < 2:
+        raise ValueError("fold_line: limite demasiado pequeno")
     raw = line.encode("utf-8")
     if len(raw) <= limit:
         return line
     partes: list[str] = []
-    chunk = raw[:limit]
-    # Retrocede hasta un borde de caracter UTF-8.
-    while chunk and (chunk[-1] & 0xC0) == 0x80:
-        chunk = chunk[:-1]
-    partes.append(chunk.decode("utf-8"))
-    resto = raw[len(chunk):]
+    corte = _prefijo_utf8(raw, limit)
+    partes.append(raw[:corte].decode("utf-8"))
+    resto = raw[corte:]
     while resto:
-        chunk = resto[:limit - 1]
-        while chunk and (chunk[-1] & 0xC0) == 0x80:
-            chunk = chunk[:-1]
-        partes.append(" " + chunk.decode("utf-8"))
-        resto = resto[len(chunk):]
+        corte = _prefijo_utf8(resto, limit - 1)
+        partes.append(" " + resto[:corte].decode("utf-8"))
+        resto = resto[corte:]
     return "\r\n".join(partes)
 
 
@@ -460,13 +501,13 @@ def _inicio_evento(p: dict):
     if dt_raw:
         try:
             dt = datetime.fromisoformat(dt_raw)
-        except ValueError:
+        except (TypeError, ValueError):
             return None
         if dt.tzinfo is None:
             return dt.replace(tzinfo=MADRID, fold=0)
         return dt.astimezone(MADRID)
     fj = p.get("fecha_jornada", "")
-    m = re.match(r"(\d{1,2})/(\d{1,2})/(\d{4})", fj or "")
+    m = re.match(r"(\d{1,2})[/-](\d{1,2})[/-](\d{4})", str(fj or ""))
     if m:
         d, mo, y = int(m.group(1)), int(m.group(2)), int(m.group(3))
         try:
@@ -542,9 +583,9 @@ def _escritura_atomica(path: Path, data: bytes) -> None:
 
 def main() -> None:
     prev = _cargar_previo()
-    prev_by_uid = {p["uid"]: p for p in prev if isinstance(p, dict) and "uid" in p}
-    prev_liga = [p for p in prev if isinstance(p, dict) and p.get("competicion") == "liga"]
-    prev_copa = [p for p in prev if isinstance(p, dict) and p.get("competicion") == "copa"]
+    prev_by_uid = {p["uid"]: p for p in prev if isinstance(p, dict) and p.get("uid")}
+    prev_liga = [p for p in prev if isinstance(p, dict) and p.get("uid") and p.get("competicion") == "liga"]
+    prev_copa = [p for p in prev if isinstance(p, dict) and p.get("uid") and p.get("competicion") == "copa"]
     feb_fallback = False
 
     try:
@@ -574,7 +615,7 @@ def main() -> None:
     duplicadas = [u for u in uids_nuevos if u in {p["uid"] for p in liga}]
     if duplicadas:
         raise ValueError(f"UIDs de copa colisionan con liga: {duplicadas}")
-    copa_hist = [p for p in prev_copa if isinstance(p, dict) and p.get("uid") not in uids_nuevos]
+    copa_hist = [p for p in prev_copa if isinstance(p, dict) and p.get("uid") and p.get("uid") not in uids_nuevos]
     if copa_nueva:
         log(f"copa: nueva={len(copa_nueva)} historico_conservado={len(copa_hist)}")
     elif copa_hist:
@@ -582,16 +623,30 @@ def main() -> None:
     copa = copa_hist + copa_nueva
 
     partidos = liga + copa
+    hoy = datetime.now(MADRID).date()
     # conservar inicio_madrid de pendientes que pasan a jugados (para fecha real del evento)
     for p in partidos:
         old = prev_by_uid.get(p["uid"])
-        if old and p["estado"] == "jugado" and "inicio_madrid" in old and "inicio_madrid" not in p:
+        if old and p.get("estado") == "jugado" and old.get("inicio_madrid") and "inicio_madrid" not in p:
             p["inicio_madrid"] = old["inicio_madrid"]
-        # No pisar una hora real ya publicada con un provisional TBD
+            if old.get("fecha_provisional"):
+                p["fecha_provisional"] = True
+            else:
+                p.pop("fecha_provisional", None)
+        # No pisar una hora real ya publicada con un provisional TBD, salvo que
+        # esa hora sea de un partido ya pasado (probable aplazamiento).
         if old and not old.get("fecha_provisional") and p.get("fecha_provisional"):
             if old.get("inicio_madrid"):
-                p["inicio_madrid"] = old["inicio_madrid"]
-                p.pop("fecha_provisional", None)
+                try:
+                    dt_viejo = datetime.fromisoformat(old["inicio_madrid"])
+                    if dt_viejo.tzinfo is not None:
+                        dt_viejo = dt_viejo.astimezone(MADRID)
+                    vieja = dt_viejo.date()
+                except (TypeError, ValueError):
+                    vieja = None
+                if vieja is not None and vieja >= hoy:
+                    p["inicio_madrid"] = old["inicio_madrid"]
+                    p.pop("fecha_provisional", None)
     # rescates manuales verificados (partidos jugados antes del primer scrape): mandan sobre todo
     if FECHAS_PATH.exists():
         try:
@@ -609,7 +664,7 @@ def main() -> None:
                     warn(f"seed: {k} con fecha invalida ({v!r}); se ignora")
                     continue
                 for p in partidos:
-                    if p["uid"] == k:
+                    if p.get("uid") == k:
                         p["inicio_madrid"] = v
                         p.pop("fecha_provisional", None)
     # Validar UIDs antes de tocar el disco: nada de JSON nuevo + ICS viejo.
@@ -623,27 +678,35 @@ def main() -> None:
         if not isinstance(sedes, dict):
             warn(f"sedes {SEDES_PATH} no es un objeto; se empieza vacio")
             sedes = {}
+        else:
+            sedes = {k: v for k, v in sedes.items() if isinstance(v, dict)}
     except Exception as e:
         warn(f"sedes {SEDES_PATH} ilegible ({e}); se empieza vacio")
         sedes = {}
     for p in partidos:
-        if not sedes.get(p["feb_partido_id"]):
+        pid = p.get("feb_partido_id")
+        if not pid:
+            warn(f"sede: {p.get('uid', '?')} sin feb_partido_id; se omite la sede")
+            continue
+        if not sedes.get(pid):
             tag = etiqueta(p)
             try:
-                sedes[p["feb_partido_id"]] = fetch_sede(p["feb_partido_id"])
-                log(f"sede {tag}: {sedes[p['feb_partido_id']]}")
+                sedes[pid] = fetch_sede(pid)
+                log(f"sede {tag}: {sedes[pid]}")
             except Exception as e:
-                warn(f"sede {tag} pid={p['feb_partido_id']}: ERROR {e}")
-                sedes[p["feb_partido_id"]] = sedes.get(p["feb_partido_id"], {})
+                warn(f"sede {tag} pid={pid}: ERROR {e}")
+                sedes[pid] = sedes.get(pid, {})
     for p in partidos:
-        if sedes.get(p["feb_partido_id"]):
-            p["sede"] = sedes[p["feb_partido_id"]]
+        pid = p.get("feb_partido_id")
+        if pid and sedes.get(pid):
+            p["sede"] = sedes[pid]
     ics = to_ics(partidos)
     JSON_PATH.parent.mkdir(parents=True, exist_ok=True)
     _escritura_atomica(JSON_PATH, (json.dumps(partidos, ensure_ascii=False, indent=2, sort_keys=True) + "\n").encode("utf-8"))
+    sedes = {k: v for k, v in sedes.items() if v}
     _escritura_atomica(SEDES_PATH, (json.dumps(sedes, ensure_ascii=False, indent=2, sort_keys=True) + "\n").encode("utf-8"))
     _escritura_atomica(ICS_PATH, ics.encode("utf-8"))
-    jug = sum(1 for p in partidos if p["estado"] == "jugado")
+    jug = sum(1 for p in partidos if p.get("estado") == "jugado")
     log(f"liga={len(liga)} copa={len(copa)} jugados={jug} pendientes={len(partidos)-jug}")
     log(f"json={JSON_PATH} ics={ICS_PATH}")
     if feb_fallback:

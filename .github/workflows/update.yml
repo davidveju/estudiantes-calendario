@@ -16,7 +16,7 @@ concurrency:
 jobs:
   update:
     runs-on: ubuntu-24.04  # pineado: ubuntu-latest migra a la 26 y no queremos sorpresas
-    timeout-minutes: 20  # FEB lenta + sedes con pausa de 1s; el scrape es atómico y reanuda
+    timeout-minutes: 30  # FEB lenta + sedes con reintentos; margen para una temporada nueva
     steps:
       - uses: actions/checkout@v5
         with:
@@ -24,6 +24,8 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"  # misma stdlib/zoneinfo en CI y local
+      - name: Tests de parsers e ICS
+        run: python3 -m unittest discover -s scripts -p "test_*.py" -v
       - name: Regenera calendario (solo stdlib)
         run: python3 scripts/scrape.py
       - name: Valida JSON e ICS
@@ -31,6 +33,7 @@ jobs:
           set -euo pipefail
           python3 -m json.tool datos/partidos.json >/dev/null
           python3 -m json.tool datos/sedes.json >/dev/null
+          python3 scripts/validate_ics.py estudiantes.ics
           grep -q '^BEGIN:VCALENDAR' estudiantes.ics
           grep -q '^END:VCALENDAR' estudiantes.ics
           git diff --check -- . ':!estudiantes.ics'

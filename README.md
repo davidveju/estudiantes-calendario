@@ -42,10 +42,10 @@ que hacer nada.
 
 | Estado | Ejemplo |
 |---|---|
-| Pendiente (liga) | 🏀 Estu - Iberolea Palencia (J4) — hora real de Madrid |
+| Pendiente (liga) | 🏀 Fibwi Mallorca - Estu (J5) — hora real de Madrid |
 | Victoria fuera | 🏀 Caja Rural CB Zamora - Estu (J2: 73-80 ✅) |
-| Derrota | 🏀 Rival - Estu (J7: 85-78 ❌) |
-| Copa | 🏆 Coviran Granada - Estu (Copa 1/16) |
+| Derrota (formato) | 🏀 Rival - Estu (J7: 85-78 ❌) |
+| Copa | 🏆 Caceres Patrimonio de la Humanidad - Estu (Copa 1/8, fecha por confirmar) |
 
 - Cada evento lleva la sede (pabellón + dirección) y el enlace al acta oficial de la FEB.
 - Los partidos no bloquean tu disponibilidad (se marcan como libres).
@@ -61,11 +61,17 @@ que hacer nada.
 - El workflow [`.github/workflows/update.yml`](.github/workflows/update.yml) lo ejecuta
   lunes, miércoles y viernes; si no hay cambios (ni horarios nuevos ni resultados),
   no se publica nada.
+- La Copa conserva las rondas anteriores aunque la FEB ya solo muestre la fase actual.
+- Los tests de los parsers y del ICS se ejecutan en cada actualización
+  (`python3 -m unittest discover -s scripts -p "test_*.py"`), y el ICS se valida
+  a nivel de bytes (CRLF y plegado RFC 5545) antes de publicarlo.
 
 ```
 estudiantes-calendario/
 ├── estudiantes.ics            ← el fichero al que te suscribes (siempre aquí)
 ├── scripts/scrape.py          ← genera el calendario desde la FEB
+├── scripts/validate_ics.py    ← valida CRLF, plegado y estructura del ICS
+├── scripts/test_scrape.py     ← tests sin red de parsers e ICS
 ├── scripts/update.sh          ← regenera + commit + push en local
 ├── datos/partidos.json        ← estado: horarios, resultados, actas
 ├── datos/sedes.json           ← caché de pabellones por partido
