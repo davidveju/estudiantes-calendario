@@ -10,22 +10,35 @@ permissions:
   contents: write
 
 concurrency:
-  group: calendario-estu
+  group: ${{ github.workflow }}-calendario-estu
   cancel-in-progress: false
 
 jobs:
   update:
     runs-on: ubuntu-24.04  # pineado: ubuntu-latest migra a la 26 y no queremos sorpresas
+    timeout-minutes: 20  # FEB lenta + sedes con pausa de 1s; el scrape es atómico y reanuda
     steps:
       - uses: actions/checkout@v5
         with:
           fetch-depth: 0  # historial completo para poder hacer pull --rebase antes del push
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"  # misma stdlib/zoneinfo en CI y local
       - name: Regenera calendario (solo stdlib)
         run: python3 scripts/scrape.py
+      - name: Valida JSON e ICS
+        run: |
+          set -euo pipefail
+          python3 -m json.tool datos/partidos.json >/dev/null
+          python3 -m json.tool datos/sedes.json >/dev/null
+          grep -q '^BEGIN:VCALENDAR' estudiantes.ics
+          grep -q '^END:VCALENDAR' estudiantes.ics
+          git diff --check -- . ':!estudiantes.ics'
       - name: Commit y push si hay cambios reales
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
+          set -euo pipefail
+          git config --local user.name "github-actions[bot]"
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git add datos/partidos.json datos/sedes.json datos/fechas_reales.json estudiantes.ics
           # El DTSTAMP cambia en cada ejecucion: si es lo unico que cambia, no hay nada que publicar
           reales=false
@@ -39,6 +52,6 @@ jobs:
             git reset -q HEAD -- estudiantes.ics && git checkout -- estudiantes.ics
             exit 0
           fi
-          git commit -m "auto: actualiza calendario Estu $(date -u +%F)"
-          git pull --rebase origin main
+          git commit -m "auto: actualiza calendario Estu $(date -u +%FT%H%MZ)"
+          git pull --rebase --autostash origin main
           git push

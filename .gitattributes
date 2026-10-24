@@ -1,0 +1,8 @@
+# ICS con CRLF RFC 5545: no convertir finales de linea en ningun OS.
+estudiantes.ics -text
+# JSON y codigo siempre LF para no generar diffs fantasma entre Linux/Windows.
+datos/*.json text eol=lf
+*.py text eol=lf
+*.yml text eol=lf
+*.md text eol=lf
+*.sh text eol=lf

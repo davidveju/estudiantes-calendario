@@ -9,7 +9,7 @@ que hacer nada.
 |---|---|
 | 📅 Fichero | [`estudiantes.ics`](estudiantes.ics) — 34 jornadas de liga + Copa España (y playoffs si se clasifica) |
 | 📡 Fuentes | Liga en [competiciones.feb.es](https://competiciones.feb.es/estadisticas/Calendario.aspx) · Copa en [feb.es](https://www.feb.es/competiciones/resultados/copaespaa/73/2026) |
-| 🔄 Actualización | Automática, lunes y viernes 12:00 UTC (vía GitHub Actions) |
+| 🔄 Actualización | Automática, lunes, miércoles y viernes 12:00 UTC (vía GitHub Actions) |
 
 > La Copa España ya está incluida. Los playoffs se añadirán si el equipo se clasifica.
 
@@ -59,14 +59,16 @@ que hacer nada.
   y [`estudiantes.ics`](estudiantes.ics), con identificadores estables por jornada y ronda
   para que tu calendario actualice cada partido en su sitio, sin duplicados.
 - El workflow [`.github/workflows/update.yml`](.github/workflows/update.yml) lo ejecuta
-  solo cada lunes y viernes; si no hay cambios (ni horarios nuevos ni resultados),
+  lunes, miércoles y viernes; si no hay cambios (ni horarios nuevos ni resultados),
   no se publica nada.
 
 ```
 estudiantes-calendario/
 ├── estudiantes.ics            ← el fichero al que te suscribes (siempre aquí)
 ├── scripts/scrape.py          ← genera el calendario desde la FEB
+├── scripts/update.sh          ← regenera + commit + push en local
 ├── datos/partidos.json        ← estado: horarios, resultados, actas
 ├── datos/sedes.json           ← caché de pabellones por partido
-└── .github/workflows/         ← actualización automática
+├── datos/fechas_reales.json   ← horas verificadas que mandan sobre la FEB
+└── .github/workflows/         ← actualización automática lun/mié/vie 12:00 UTC
 ```

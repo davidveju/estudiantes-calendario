@@ -1,623 +1,642 @@
 [
   {
-    "jornada": 1,
-    "fecha_jornada": "25/09/2026",
-    "uid": "estu-2627-j01@estudiantes-calendario",
-    "competicion": "liga",
-    "competicion_nombre": "Primera FEB 26/27",
-    "casa": true,
-    "rival": "Insolac Caja 87",
-    "feb_partido_id": "2535730",
     "acta": "https://baloncestoenvivo.feb.es/Partido.aspx?p=2535730",
+    "casa": true,
+    "competicion": "liga",
+    "competicion_nombre": "Primera FEB 26/27",
     "estado": "jugado",
-    "resultado_local": 78,
-    "resultado_visitante": 65,
-    "resultado_estu": 78,
-    "resultado_rival": 65,
-    "victoria": true,
+    "feb_partido_id": "2535730",
+    "fecha_jornada": "25/09/2026",
     "inicio_madrid": "2026-09-27T12:00:00",
-    "sede": {
-      "pabellon": "Movistar Arena",
-      "direccion": "Madrid (Madrid)"
-    }
-  },
-  {
-    "jornada": 2,
-    "fecha_jornada": "02/10/2026",
-    "uid": "estu-2627-j02@estudiantes-calendario",
-    "competicion": "liga",
-    "competicion_nombre": "Primera FEB 26/27",
-    "casa": false,
-    "rival": "Caja Rural CB Zamora",
-    "feb_partido_id": "2535742",
-    "acta": "https://baloncestoenvivo.feb.es/Partido.aspx?p=2535742",
-    "estado": "jugado",
-    "resultado_local": 73,
-    "resultado_visitante": 80,
-    "resultado_estu": 80,
-    "resultado_rival": 73,
-    "victoria": true,
-    "inicio_madrid": "2026-10-03T19:30:00",
-    "sede": {
-      "pabellon": "Pabellon Angel Nieto",
-      "direccion": "Zamora (Zamora)"
-    }
-  },
-  {
-    "jornada": 3,
-    "fecha_jornada": "09/10/2026",
-    "uid": "estu-2627-j03@estudiantes-calendario",
-    "competicion": "liga",
-    "competicion_nombre": "Primera FEB 26/27",
-    "casa": true,
-    "rival": "Inveready Askatuak Gipuzkoa",
-    "feb_partido_id": "2535747",
-    "acta": "https://baloncestoenvivo.feb.es/Partido.aspx?p=2535747",
-    "estado": "jugado",
-    "resultado_local": 106,
-    "resultado_visitante": 76,
-    "resultado_estu": 106,
-    "resultado_rival": 76,
-    "victoria": true,
-    "inicio_madrid": "2026-10-11T18:30:00",
-    "sede": {
-      "pabellon": "Movistar Arena",
-      "direccion": "Madrid (Madrid)"
-    }
-  },
-  {
-    "jornada": 4,
-    "fecha_jornada": "16/10/2026",
-    "uid": "estu-2627-j04@estudiantes-calendario",
-    "competicion": "liga",
-    "competicion_nombre": "Primera FEB 26/27",
-    "casa": true,
-    "rival": "Iberolea Palencia",
-    "feb_partido_id": "2535756",
-    "acta": "https://baloncestoenvivo.feb.es/Partido.aspx?p=2535756",
-    "estado": "jugado",
-    "resultado_local": 86,
-    "resultado_visitante": 77,
-    "resultado_estu": 86,
-    "resultado_rival": 77,
-    "victoria": true,
-    "inicio_madrid": "2026-10-18T18:30:00",
-    "sede": {
-      "pabellon": "Movistar Arena",
-      "direccion": "Madrid (Madrid)"
-    }
-  },
-  {
-    "jornada": 5,
-    "fecha_jornada": "23/10/2026",
-    "uid": "estu-2627-j05@estudiantes-calendario",
-    "competicion": "liga",
-    "competicion_nombre": "Primera FEB 26/27",
-    "casa": false,
-    "rival": "Fibwi Mallorca Basquet Palma",
-    "feb_partido_id": "2535763",
-    "acta": "https://baloncestoenvivo.feb.es/Partido.aspx?p=2535763",
-    "estado": "pendiente",
-    "inicio_madrid": "2026-10-25T18:00:00",
-    "sede": {
-      "pabellon": "Polideportivo de Son Moix",
-      "direccion": "Palma de Mallorca (Illes Balears)"
-    }
-  },
-  {
-    "jornada": 6,
-    "fecha_jornada": "30/10/2026",
-    "uid": "estu-2627-j06@estudiantes-calendario",
-    "competicion": "liga",
-    "competicion_nombre": "Primera FEB 26/27",
-    "casa": true,
-    "rival": "Cajasiete Gran Canaria",
-    "feb_partido_id": "2535775",
-    "acta": "https://baloncestoenvivo.feb.es/Partido.aspx?p=2535775",
-    "estado": "pendiente",
-    "inicio_madrid": "2026-11-01T18:30:00",
-    "sede": {
-      "pabellon": "Movistar Arena",
-      "direccion": "Madrid (Madrid)"
-    }
-  },
-  {
-    "jornada": 7,
-    "fecha_jornada": "06/11/2026",
-    "uid": "estu-2627-j07@estudiantes-calendario",
-    "competicion": "liga",
-    "competicion_nombre": "Primera FEB 26/27",
-    "casa": false,
-    "rival": "Grupo Alega Cantabria",
-    "feb_partido_id": "2535786",
-    "acta": "https://baloncestoenvivo.feb.es/Partido.aspx?p=2535786",
-    "estado": "pendiente",
-    "inicio_madrid": "2026-11-07T19:00:00",
-    "sede": {
-      "pabellon": "Pabellón Vicente Trueba",
-      "direccion": "Torrelavega (Cantabria)"
-    }
-  },
-  {
-    "jornada": 8,
-    "fecha_jornada": "13/11/2026",
-    "uid": "estu-2627-j08@estudiantes-calendario",
-    "competicion": "liga",
-    "competicion_nombre": "Primera FEB 26/27",
-    "casa": false,
-    "rival": "Coviran Granada",
-    "feb_partido_id": "2535793",
-    "acta": "https://baloncestoenvivo.feb.es/Partido.aspx?p=2535793",
-    "estado": "pendiente",
-    "inicio_madrid": "2026-11-14T18:00:00",
-    "sede": {
-      "pabellon": "Palacio Deportes Granada",
-      "direccion": "Granada (Granada)"
-    }
-  },
-  {
-    "jornada": 9,
-    "fecha_jornada": "20/11/2026",
-    "uid": "estu-2627-j09@estudiantes-calendario",
-    "competicion": "liga",
-    "competicion_nombre": "Primera FEB 26/27",
-    "casa": true,
-    "rival": "Club Ourense Baloncesto",
-    "feb_partido_id": "2535799",
-    "acta": "https://baloncestoenvivo.feb.es/Partido.aspx?p=2535799",
-    "estado": "pendiente",
-    "inicio_madrid": "2026-11-22T12:00:00",
-    "sede": {
-      "pabellon": "Movistar Arena",
-      "direccion": "Madrid (Madrid)"
-    }
-  },
-  {
-    "jornada": 10,
-    "fecha_jornada": "04/12/2026",
-    "uid": "estu-2627-j10@estudiantes-calendario",
-    "competicion": "liga",
-    "competicion_nombre": "Primera FEB 26/27",
-    "casa": true,
-    "rival": "Bueno Arenas Albacete Basket",
-    "feb_partido_id": "2535812",
-    "acta": "https://baloncestoenvivo.feb.es/Partido.aspx?p=2535812",
-    "estado": "pendiente",
-    "inicio_madrid": "2026-12-06T18:30:00",
-    "sede": {
-      "pabellon": "Movistar Arena",
-      "direccion": "Madrid (Madrid)"
-    }
-  },
-  {
-    "jornada": 11,
-    "fecha_jornada": "11/12/2026",
-    "uid": "estu-2627-j11@estudiantes-calendario",
-    "competicion": "liga",
-    "competicion_nombre": "Primera FEB 26/27",
-    "casa": false,
-    "rival": "Palmer Basket Mallorca Palma",
-    "feb_partido_id": "2535817",
-    "acta": "https://baloncestoenvivo.feb.es/Partido.aspx?p=2535817",
-    "estado": "pendiente",
-    "inicio_madrid": "2026-12-13T18:00:00",
-    "sede": {
-      "pabellon": "Poliesportiu Son Moix",
-      "direccion": "Palma de Mallorca (Illes Balears)"
-    }
-  },
-  {
-    "jornada": 12,
-    "fecha_jornada": "18/12/2026",
-    "uid": "estu-2627-j12@estudiantes-calendario",
-    "competicion": "liga",
-    "competicion_nombre": "Primera FEB 26/27",
-    "casa": false,
-    "rival": "Grupo Ureta Tizona Burgos",
-    "feb_partido_id": "2535826",
-    "acta": "https://baloncestoenvivo.feb.es/Partido.aspx?p=2535826",
-    "estado": "pendiente",
-    "inicio_madrid": "2026-12-18T20:45:00",
-    "sede": {
-      "pabellon": "Polideportivo Municipal el Plantio",
-      "direccion": "Burgos (Burgos)"
-    }
-  },
-  {
-    "jornada": 13,
-    "fecha_jornada": "27/12/2026",
-    "uid": "estu-2627-j13@estudiantes-calendario",
-    "competicion": "liga",
-    "competicion_nombre": "Primera FEB 26/27",
-    "casa": true,
-    "rival": "Partizán de Fuenlabrada",
-    "feb_partido_id": "2535837",
-    "acta": "https://baloncestoenvivo.feb.es/Partido.aspx?p=2535837",
-    "estado": "pendiente",
-    "inicio_madrid": "2026-12-27T12:00:00",
-    "sede": {
-      "pabellon": "Movistar Arena",
-      "direccion": "Madrid (Madrid)"
-    }
-  },
-  {
-    "jornada": 14,
-    "fecha_jornada": "03/01/2027",
-    "uid": "estu-2627-j14@estudiantes-calendario",
-    "competicion": "liga",
-    "competicion_nombre": "Primera FEB 26/27",
-    "casa": false,
-    "rival": "Bàsquet Menorca",
-    "feb_partido_id": "2535844",
-    "acta": "https://baloncestoenvivo.feb.es/Partido.aspx?p=2535844",
-    "estado": "pendiente",
-    "inicio_madrid": "2027-01-03T18:30:00",
-    "sede": {
-      "pabellon": "Pavelló Menorca",
-      "direccion": "Mahón (Illes Balears)"
-    }
-  },
-  {
-    "jornada": 15,
-    "fecha_jornada": "08/01/2027",
-    "uid": "estu-2627-j15@estudiantes-calendario",
-    "competicion": "liga",
-    "competicion_nombre": "Primera FEB 26/27",
-    "casa": true,
-    "rival": "Hla Alicante",
-    "feb_partido_id": "2535855",
-    "acta": "https://baloncestoenvivo.feb.es/Partido.aspx?p=2535855",
-    "estado": "pendiente",
-    "inicio_madrid": "2027-01-10T18:30:00",
-    "sede": {
-      "pabellon": "Movistar Arena",
-      "direccion": "Madrid (Madrid)"
-    }
-  },
-  {
-    "jornada": 16,
-    "fecha_jornada": "12/01/2027",
-    "uid": "estu-2627-j16@estudiantes-calendario",
-    "competicion": "liga",
-    "competicion_nombre": "Primera FEB 26/27",
-    "casa": false,
-    "rival": "Alimerka Oviedo Baloncesto",
-    "feb_partido_id": "2535866",
-    "acta": "https://baloncestoenvivo.feb.es/Partido.aspx?p=2535866",
-    "estado": "pendiente",
-    "inicio_madrid": "2027-01-13T20:30:00",
-    "sede": {
-      "pabellon": "Palacio de los Deportes de Oviedo",
-      "direccion": "Oviedo (Asturias)"
-    }
-  },
-  {
-    "jornada": 17,
-    "fecha_jornada": "17/01/2027",
-    "uid": "estu-2627-j17@estudiantes-calendario",
-    "competicion": "liga",
-    "competicion_nombre": "Primera FEB 26/27",
-    "casa": true,
-    "rival": "Cajasol Coto Córdoba",
-    "feb_partido_id": "2535874",
-    "acta": "https://baloncestoenvivo.feb.es/Partido.aspx?p=2535874",
-    "estado": "pendiente",
-    "inicio_madrid": "2027-01-17T12:00:00",
-    "sede": {
-      "pabellon": "Movistar Arena",
-      "direccion": "Madrid (Madrid)"
-    }
-  },
-  {
-    "jornada": 18,
-    "fecha_jornada": "29/01/2027",
-    "uid": "estu-2627-j18@estudiantes-calendario",
-    "competicion": "liga",
-    "competicion_nombre": "Primera FEB 26/27",
-    "casa": true,
-    "rival": "Palmer Basket Mallorca Palma",
-    "feb_partido_id": "2535881",
-    "acta": "https://baloncestoenvivo.feb.es/Partido.aspx?p=2535881",
-    "estado": "pendiente",
-    "inicio_madrid": "2027-01-31T12:00:00",
-    "sede": {
-      "pabellon": "Movistar Academy Magariños",
-      "direccion": "Madrid (Madrid)"
-    }
-  },
-  {
-    "jornada": 19,
-    "fecha_jornada": "05/02/2027",
-    "uid": "estu-2627-j19@estudiantes-calendario",
-    "competicion": "liga",
-    "competicion_nombre": "Primera FEB 26/27",
-    "casa": false,
-    "rival": "Cajasiete Gran Canaria",
-    "feb_partido_id": "2535894",
-    "acta": "https://baloncestoenvivo.feb.es/Partido.aspx?p=2535894",
-    "estado": "pendiente",
-    "inicio_madrid": "2027-02-06T20:00:00",
-    "sede": {
-      "pabellon": "Gran Canaria Arena",
-      "direccion": "Palmas de Gran Canaria, Las (Las Palmas)"
-    }
-  },
-  {
-    "jornada": 20,
-    "fecha_jornada": "09/02/2027",
-    "uid": "estu-2627-j20@estudiantes-calendario",
-    "competicion": "liga",
-    "competicion_nombre": "Primera FEB 26/27",
-    "casa": true,
-    "rival": "Bàsquet Menorca",
-    "feb_partido_id": "2535901",
-    "acta": "https://baloncestoenvivo.feb.es/Partido.aspx?p=2535901",
-    "estado": "pendiente",
-    "inicio_madrid": "2027-02-10T20:00:00",
-    "sede": {
-      "pabellon": "Movistar Academy Magariños",
-      "direccion": "Madrid (Madrid)"
-    }
-  },
-  {
-    "jornada": 21,
-    "fecha_jornada": "14/02/2027",
-    "uid": "estu-2627-j21@estudiantes-calendario",
-    "competicion": "liga",
-    "competicion_nombre": "Primera FEB 26/27",
-    "casa": false,
-    "rival": "Insolac Caja 87",
-    "feb_partido_id": "2535913",
-    "acta": "https://baloncestoenvivo.feb.es/Partido.aspx?p=2535913",
-    "estado": "pendiente",
-    "inicio_madrid": "2027-02-14T12:30:00",
-    "sede": {
-      "pabellon": "Palacio Deportes San Pablo",
-      "direccion": "Sevilla (Sevilla)"
-    }
-  },
-  {
-    "jornada": 22,
-    "fecha_jornada": "19/02/2027",
-    "uid": "estu-2627-j22@estudiantes-calendario",
-    "competicion": "liga",
-    "competicion_nombre": "Primera FEB 26/27",
-    "casa": false,
-    "rival": "Iberolea Palencia",
-    "feb_partido_id": "2535919",
-    "acta": "https://baloncestoenvivo.feb.es/Partido.aspx?p=2535919",
-    "estado": "pendiente",
-    "inicio_madrid": "2027-02-19T21:00:00",
-    "sede": {
-      "pabellon": "Pabellón Municipal de Deportes (palencia)",
-      "direccion": "Palencia (Palencia)"
-    }
-  },
-  {
-    "jornada": 23,
-    "fecha_jornada": "05/03/2027",
-    "uid": "estu-2627-j23@estudiantes-calendario",
-    "competicion": "liga",
-    "competicion_nombre": "Primera FEB 26/27",
-    "casa": true,
-    "rival": "Caja Rural CB Zamora",
-    "feb_partido_id": "2535928",
-    "acta": "https://baloncestoenvivo.feb.es/Partido.aspx?p=2535928",
-    "estado": "pendiente",
-    "inicio_madrid": "2027-03-07T12:00:00",
-    "sede": {
-      "pabellon": "Movistar Arena",
-      "direccion": "Madrid (Madrid)"
-    }
-  },
-  {
-    "jornada": 24,
-    "fecha_jornada": "09/03/2027",
-    "uid": "estu-2627-j24@estudiantes-calendario",
-    "competicion": "liga",
-    "competicion_nombre": "Primera FEB 26/27",
-    "casa": false,
-    "rival": "Hla Alicante",
-    "feb_partido_id": "2535933",
-    "acta": "https://baloncestoenvivo.feb.es/Partido.aspx?p=2535933",
-    "estado": "pendiente",
-    "inicio_madrid": "2027-03-10T20:45:00",
-    "sede": {
-      "pabellon": "Centre de Tecnificació Esportiva D’alacant",
-      "direccion": "Alicante/Alacant (Alicante)"
-    }
-  },
-  {
-    "jornada": 25,
-    "fecha_jornada": "14/03/2027",
-    "uid": "estu-2627-j25@estudiantes-calendario",
-    "competicion": "liga",
-    "competicion_nombre": "Primera FEB 26/27",
-    "casa": true,
-    "rival": "Coviran Granada",
-    "feb_partido_id": "2535946",
-    "acta": "https://baloncestoenvivo.feb.es/Partido.aspx?p=2535946",
-    "estado": "pendiente",
-    "inicio_madrid": "2027-03-14T12:00:00",
-    "sede": {
-      "pabellon": "Movistar Arena",
-      "direccion": "Madrid (Madrid)"
-    }
-  },
-  {
-    "jornada": 26,
-    "fecha_jornada": "19/03/2027",
-    "uid": "estu-2627-j26@estudiantes-calendario",
-    "competicion": "liga",
-    "competicion_nombre": "Primera FEB 26/27",
-    "casa": false,
-    "rival": "Bueno Arenas Albacete Basket",
-    "feb_partido_id": "2535950",
-    "acta": "https://baloncestoenvivo.feb.es/Partido.aspx?p=2535950",
-    "estado": "pendiente",
-    "inicio_madrid": "2027-03-20T19:00:00",
-    "sede": {
-      "pabellon": "Pabellón del Parque",
-      "direccion": "Albacete (Albacete)"
-    }
-  },
-  {
-    "jornada": 27,
-    "fecha_jornada": "26/03/2027",
-    "uid": "estu-2627-j27@estudiantes-calendario",
-    "competicion": "liga",
-    "competicion_nombre": "Primera FEB 26/27",
-    "casa": true,
-    "rival": "Grupo Alega Cantabria",
-    "feb_partido_id": "2535964",
-    "acta": "https://baloncestoenvivo.feb.es/Partido.aspx?p=2535964",
-    "estado": "pendiente",
-    "inicio_madrid": "2027-03-28T12:00:00",
-    "sede": {
-      "pabellon": "Movistar Arena",
-      "direccion": "Madrid (Madrid)"
-    }
-  },
-  {
-    "jornada": 28,
-    "fecha_jornada": "02/04/2027",
-    "uid": "estu-2627-j28@estudiantes-calendario",
-    "competicion": "liga",
-    "competicion_nombre": "Primera FEB 26/27",
-    "casa": false,
-    "rival": "Partizán de Fuenlabrada",
-    "feb_partido_id": "2535972",
-    "acta": "https://baloncestoenvivo.feb.es/Partido.aspx?p=2535972",
-    "estado": "pendiente",
-    "inicio_madrid": "2027-04-03T18:30:00",
-    "sede": {
-      "pabellon": "Fernando Martin, Pabellon",
-      "direccion": "Fuenlabrada (Madrid)"
-    }
-  },
-  {
-    "jornada": 29,
-    "fecha_jornada": "09/04/2027",
-    "uid": "estu-2627-j29@estudiantes-calendario",
-    "competicion": "liga",
-    "competicion_nombre": "Primera FEB 26/27",
-    "casa": false,
-    "rival": "Inveready Askatuak Gipuzkoa",
-    "feb_partido_id": "2535982",
-    "acta": "https://baloncestoenvivo.feb.es/Partido.aspx?p=2535982",
-    "estado": "pendiente",
-    "inicio_madrid": "2027-04-11T18:00:00",
-    "sede": {
-      "pabellon": "Polideportivo Josean Gasca",
-      "direccion": "Donostia-San Sebastián (Guipúzcoa)"
-    }
-  },
-  {
-    "jornada": 30,
-    "fecha_jornada": "16/04/2027",
-    "uid": "estu-2627-j30@estudiantes-calendario",
-    "competicion": "liga",
-    "competicion_nombre": "Primera FEB 26/27",
-    "casa": true,
-    "rival": "Grupo Ureta Tizona Burgos",
-    "feb_partido_id": "2535989",
-    "acta": "https://baloncestoenvivo.feb.es/Partido.aspx?p=2535989",
-    "estado": "pendiente",
-    "inicio_madrid": "2027-04-18T18:30:00",
-    "sede": {
-      "pabellon": "Movistar Arena",
-      "direccion": "Madrid (Madrid)"
-    }
-  },
-  {
-    "jornada": 31,
-    "fecha_jornada": "20/04/2027",
-    "uid": "estu-2627-j31@estudiantes-calendario",
-    "competicion": "liga",
-    "competicion_nombre": "Primera FEB 26/27",
-    "casa": true,
-    "rival": "Fibwi Mallorca Basquet Palma",
-    "feb_partido_id": "2536001",
-    "acta": "https://baloncestoenvivo.feb.es/Partido.aspx?p=2536001",
-    "estado": "pendiente",
-    "inicio_madrid": "2027-04-21T20:00:00",
-    "sede": {
-      "pabellon": "Movistar Arena",
-      "direccion": "Madrid (Madrid)"
-    }
-  },
-  {
-    "jornada": 32,
-    "fecha_jornada": "25/04/2027",
-    "uid": "estu-2627-j32@estudiantes-calendario",
-    "competicion": "liga",
-    "competicion_nombre": "Primera FEB 26/27",
-    "casa": false,
-    "rival": "Club Ourense Baloncesto",
-    "feb_partido_id": "2536009",
-    "acta": "https://baloncestoenvivo.feb.es/Partido.aspx?p=2536009",
-    "estado": "pendiente",
-    "inicio_madrid": "2027-04-24T19:00:00",
-    "sede": {
-      "pabellon": "Pazo Dos Deportes Paco Paz",
-      "direccion": "Ourense (Ourense)"
-    }
-  },
-  {
-    "jornada": 33,
-    "fecha_jornada": "30/04/2027",
-    "uid": "estu-2627-j33@estudiantes-calendario",
-    "competicion": "liga",
-    "competicion_nombre": "Primera FEB 26/27",
-    "casa": true,
-    "rival": "Alimerka Oviedo Baloncesto",
-    "feb_partido_id": "2536018",
-    "acta": "https://baloncestoenvivo.feb.es/Partido.aspx?p=2536018",
-    "estado": "pendiente",
-    "inicio_madrid": "2027-05-02T18:30:00",
-    "sede": {
-      "pabellon": "Movistar Academy Magariños",
-      "direccion": "Madrid (Madrid)"
-    }
-  },
-  {
-    "jornada": 34,
-    "fecha_jornada": "07/05/2027",
-    "uid": "estu-2627-j34@estudiantes-calendario",
-    "competicion": "liga",
-    "competicion_nombre": "Primera FEB 26/27",
-    "casa": false,
-    "rival": "Cajasol Coto Córdoba",
-    "feb_partido_id": "2536024",
-    "acta": "https://baloncestoenvivo.feb.es/Partido.aspx?p=2536024",
-    "estado": "pendiente",
-    "inicio_madrid": "2027-05-07T21:00:00",
-    "sede": {
-      "pabellon": "Palacio Municipal de Deportes Vista Alegre",
-      "direccion": "Córdoba (Córdoba)"
-    }
-  },
-  {
     "jornada": 1,
-    "ronda": "1/16",
-    "fecha_jornada": "20/10/2026",
-    "uid": "estu-2627-copa-j01@estudiantes-calendario",
+    "resultado_estu": 78,
+    "resultado_local": 78,
+    "resultado_rival": 65,
+    "resultado_visitante": 65,
+    "rival": "Insolac Caja 87",
+    "sede": {
+      "direccion": "Madrid (Madrid)",
+      "pabellon": "Movistar Arena"
+    },
+    "uid": "estu-2627-j01@estudiantes-calendario",
+    "victoria": true
+  },
+  {
+    "acta": "https://baloncestoenvivo.feb.es/Partido.aspx?p=2535742",
+    "casa": false,
+    "competicion": "liga",
+    "competicion_nombre": "Primera FEB 26/27",
+    "estado": "jugado",
+    "feb_partido_id": "2535742",
+    "fecha_jornada": "02/10/2026",
+    "inicio_madrid": "2026-10-03T19:30:00",
+    "jornada": 2,
+    "resultado_estu": 80,
+    "resultado_local": 73,
+    "resultado_rival": 73,
+    "resultado_visitante": 80,
+    "rival": "Caja Rural CB Zamora",
+    "sede": {
+      "direccion": "Zamora (Zamora)",
+      "pabellon": "Pabellon Angel Nieto"
+    },
+    "uid": "estu-2627-j02@estudiantes-calendario",
+    "victoria": true
+  },
+  {
+    "acta": "https://baloncestoenvivo.feb.es/Partido.aspx?p=2535747",
+    "casa": true,
+    "competicion": "liga",
+    "competicion_nombre": "Primera FEB 26/27",
+    "estado": "jugado",
+    "feb_partido_id": "2535747",
+    "fecha_jornada": "09/10/2026",
+    "inicio_madrid": "2026-10-11T18:30:00",
+    "jornada": 3,
+    "resultado_estu": 106,
+    "resultado_local": 106,
+    "resultado_rival": 76,
+    "resultado_visitante": 76,
+    "rival": "Inveready Askatuak Gipuzkoa",
+    "sede": {
+      "direccion": "Madrid (Madrid)",
+      "pabellon": "Movistar Arena"
+    },
+    "uid": "estu-2627-j03@estudiantes-calendario",
+    "victoria": true
+  },
+  {
+    "acta": "https://baloncestoenvivo.feb.es/Partido.aspx?p=2535756",
+    "casa": true,
+    "competicion": "liga",
+    "competicion_nombre": "Primera FEB 26/27",
+    "estado": "jugado",
+    "feb_partido_id": "2535756",
+    "fecha_jornada": "16/10/2026",
+    "inicio_madrid": "2026-10-18T18:30:00",
+    "jornada": 4,
+    "resultado_estu": 86,
+    "resultado_local": 86,
+    "resultado_rival": 77,
+    "resultado_visitante": 77,
+    "rival": "Iberolea Palencia",
+    "sede": {
+      "direccion": "Madrid (Madrid)",
+      "pabellon": "Movistar Arena"
+    },
+    "uid": "estu-2627-j04@estudiantes-calendario",
+    "victoria": true
+  },
+  {
+    "acta": "https://baloncestoenvivo.feb.es/Partido.aspx?p=2535763",
+    "casa": false,
+    "competicion": "liga",
+    "competicion_nombre": "Primera FEB 26/27",
+    "estado": "pendiente",
+    "feb_partido_id": "2535763",
+    "fecha_jornada": "23/10/2026",
+    "inicio_madrid": "2026-10-25T18:00:00",
+    "jornada": 5,
+    "rival": "Fibwi Mallorca Basquet Palma",
+    "sede": {
+      "direccion": "Palma de Mallorca (Illes Balears)",
+      "pabellon": "Polideportivo de Son Moix"
+    },
+    "uid": "estu-2627-j05@estudiantes-calendario"
+  },
+  {
+    "acta": "https://baloncestoenvivo.feb.es/Partido.aspx?p=2535775",
+    "casa": true,
+    "competicion": "liga",
+    "competicion_nombre": "Primera FEB 26/27",
+    "estado": "pendiente",
+    "feb_partido_id": "2535775",
+    "fecha_jornada": "30/10/2026",
+    "inicio_madrid": "2026-11-01T18:30:00",
+    "jornada": 6,
+    "rival": "Cajasiete Gran Canaria",
+    "sede": {
+      "direccion": "Madrid (Madrid)",
+      "pabellon": "Movistar Arena"
+    },
+    "uid": "estu-2627-j06@estudiantes-calendario"
+  },
+  {
+    "acta": "https://baloncestoenvivo.feb.es/Partido.aspx?p=2535786",
+    "casa": false,
+    "competicion": "liga",
+    "competicion_nombre": "Primera FEB 26/27",
+    "estado": "pendiente",
+    "feb_partido_id": "2535786",
+    "fecha_jornada": "06/11/2026",
+    "inicio_madrid": "2026-11-07T19:00:00",
+    "jornada": 7,
+    "rival": "Grupo Alega Cantabria",
+    "sede": {
+      "direccion": "Torrelavega (Cantabria)",
+      "pabellon": "Pabellón Vicente Trueba"
+    },
+    "uid": "estu-2627-j07@estudiantes-calendario"
+  },
+  {
+    "acta": "https://baloncestoenvivo.feb.es/Partido.aspx?p=2535793",
+    "casa": false,
+    "competicion": "liga",
+    "competicion_nombre": "Primera FEB 26/27",
+    "estado": "pendiente",
+    "feb_partido_id": "2535793",
+    "fecha_jornada": "13/11/2026",
+    "inicio_madrid": "2026-11-14T18:00:00",
+    "jornada": 8,
+    "rival": "Coviran Granada",
+    "sede": {
+      "direccion": "Granada (Granada)",
+      "pabellon": "Palacio Deportes Granada"
+    },
+    "uid": "estu-2627-j08@estudiantes-calendario"
+  },
+  {
+    "acta": "https://baloncestoenvivo.feb.es/Partido.aspx?p=2535799",
+    "casa": true,
+    "competicion": "liga",
+    "competicion_nombre": "Primera FEB 26/27",
+    "estado": "pendiente",
+    "feb_partido_id": "2535799",
+    "fecha_jornada": "20/11/2026",
+    "inicio_madrid": "2026-11-22T12:00:00",
+    "jornada": 9,
+    "rival": "Club Ourense Baloncesto",
+    "sede": {
+      "direccion": "Madrid (Madrid)",
+      "pabellon": "Movistar Arena"
+    },
+    "uid": "estu-2627-j09@estudiantes-calendario"
+  },
+  {
+    "acta": "https://baloncestoenvivo.feb.es/Partido.aspx?p=2535812",
+    "casa": true,
+    "competicion": "liga",
+    "competicion_nombre": "Primera FEB 26/27",
+    "estado": "pendiente",
+    "feb_partido_id": "2535812",
+    "fecha_jornada": "04/12/2026",
+    "inicio_madrid": "2026-12-06T18:30:00",
+    "jornada": 10,
+    "rival": "Bueno Arenas Albacete Basket",
+    "sede": {
+      "direccion": "Madrid (Madrid)",
+      "pabellon": "Movistar Arena"
+    },
+    "uid": "estu-2627-j10@estudiantes-calendario"
+  },
+  {
+    "acta": "https://baloncestoenvivo.feb.es/Partido.aspx?p=2535817",
+    "casa": false,
+    "competicion": "liga",
+    "competicion_nombre": "Primera FEB 26/27",
+    "estado": "pendiente",
+    "feb_partido_id": "2535817",
+    "fecha_jornada": "11/12/2026",
+    "inicio_madrid": "2026-12-13T18:00:00",
+    "jornada": 11,
+    "rival": "Palmer Basket Mallorca Palma",
+    "sede": {
+      "direccion": "Palma de Mallorca (Illes Balears)",
+      "pabellon": "Poliesportiu Son Moix"
+    },
+    "uid": "estu-2627-j11@estudiantes-calendario"
+  },
+  {
+    "acta": "https://baloncestoenvivo.feb.es/Partido.aspx?p=2535826",
+    "casa": false,
+    "competicion": "liga",
+    "competicion_nombre": "Primera FEB 26/27",
+    "estado": "pendiente",
+    "feb_partido_id": "2535826",
+    "fecha_jornada": "18/12/2026",
+    "inicio_madrid": "2026-12-18T20:45:00",
+    "jornada": 12,
+    "rival": "Grupo Ureta Tizona Burgos",
+    "sede": {
+      "direccion": "Burgos (Burgos)",
+      "pabellon": "Polideportivo Municipal el Plantio"
+    },
+    "uid": "estu-2627-j12@estudiantes-calendario"
+  },
+  {
+    "acta": "https://baloncestoenvivo.feb.es/Partido.aspx?p=2535837",
+    "casa": true,
+    "competicion": "liga",
+    "competicion_nombre": "Primera FEB 26/27",
+    "estado": "pendiente",
+    "feb_partido_id": "2535837",
+    "fecha_jornada": "27/12/2026",
+    "inicio_madrid": "2026-12-27T12:00:00",
+    "jornada": 13,
+    "rival": "Partizán de Fuenlabrada",
+    "sede": {
+      "direccion": "Madrid (Madrid)",
+      "pabellon": "Movistar Arena"
+    },
+    "uid": "estu-2627-j13@estudiantes-calendario"
+  },
+  {
+    "acta": "https://baloncestoenvivo.feb.es/Partido.aspx?p=2535844",
+    "casa": false,
+    "competicion": "liga",
+    "competicion_nombre": "Primera FEB 26/27",
+    "estado": "pendiente",
+    "feb_partido_id": "2535844",
+    "fecha_jornada": "03/01/2027",
+    "inicio_madrid": "2027-01-03T18:30:00",
+    "jornada": 14,
+    "rival": "Bàsquet Menorca",
+    "sede": {
+      "direccion": "Mahón (Illes Balears)",
+      "pabellon": "Pavelló Menorca"
+    },
+    "uid": "estu-2627-j14@estudiantes-calendario"
+  },
+  {
+    "acta": "https://baloncestoenvivo.feb.es/Partido.aspx?p=2535855",
+    "casa": true,
+    "competicion": "liga",
+    "competicion_nombre": "Primera FEB 26/27",
+    "estado": "pendiente",
+    "feb_partido_id": "2535855",
+    "fecha_jornada": "08/01/2027",
+    "inicio_madrid": "2027-01-10T18:30:00",
+    "jornada": 15,
+    "rival": "HLA Alicante",
+    "sede": {
+      "direccion": "Madrid (Madrid)",
+      "pabellon": "Movistar Arena"
+    },
+    "uid": "estu-2627-j15@estudiantes-calendario"
+  },
+  {
+    "acta": "https://baloncestoenvivo.feb.es/Partido.aspx?p=2535866",
+    "casa": false,
+    "competicion": "liga",
+    "competicion_nombre": "Primera FEB 26/27",
+    "estado": "pendiente",
+    "feb_partido_id": "2535866",
+    "fecha_jornada": "12/01/2027",
+    "inicio_madrid": "2027-01-13T20:30:00",
+    "jornada": 16,
+    "rival": "Alimerka Oviedo Baloncesto",
+    "sede": {
+      "direccion": "Oviedo (Asturias)",
+      "pabellon": "Palacio de los Deportes de Oviedo"
+    },
+    "uid": "estu-2627-j16@estudiantes-calendario"
+  },
+  {
+    "acta": "https://baloncestoenvivo.feb.es/Partido.aspx?p=2535874",
+    "casa": true,
+    "competicion": "liga",
+    "competicion_nombre": "Primera FEB 26/27",
+    "estado": "pendiente",
+    "feb_partido_id": "2535874",
+    "fecha_jornada": "17/01/2027",
+    "inicio_madrid": "2027-01-17T12:00:00",
+    "jornada": 17,
+    "rival": "Cajasol Coto Córdoba",
+    "sede": {
+      "direccion": "Madrid (Madrid)",
+      "pabellon": "Movistar Arena"
+    },
+    "uid": "estu-2627-j17@estudiantes-calendario"
+  },
+  {
+    "acta": "https://baloncestoenvivo.feb.es/Partido.aspx?p=2535881",
+    "casa": true,
+    "competicion": "liga",
+    "competicion_nombre": "Primera FEB 26/27",
+    "estado": "pendiente",
+    "feb_partido_id": "2535881",
+    "fecha_jornada": "29/01/2027",
+    "inicio_madrid": "2027-01-31T12:00:00",
+    "jornada": 18,
+    "rival": "Palmer Basket Mallorca Palma",
+    "sede": {
+      "direccion": "Madrid (Madrid)",
+      "pabellon": "Movistar Academy Magariños"
+    },
+    "uid": "estu-2627-j18@estudiantes-calendario"
+  },
+  {
+    "acta": "https://baloncestoenvivo.feb.es/Partido.aspx?p=2535894",
+    "casa": false,
+    "competicion": "liga",
+    "competicion_nombre": "Primera FEB 26/27",
+    "estado": "pendiente",
+    "feb_partido_id": "2535894",
+    "fecha_jornada": "05/02/2027",
+    "inicio_madrid": "2027-02-06T20:00:00",
+    "jornada": 19,
+    "rival": "Cajasiete Gran Canaria",
+    "sede": {
+      "direccion": "Palmas de Gran Canaria, Las (Las Palmas)",
+      "pabellon": "Gran Canaria Arena"
+    },
+    "uid": "estu-2627-j19@estudiantes-calendario"
+  },
+  {
+    "acta": "https://baloncestoenvivo.feb.es/Partido.aspx?p=2535901",
+    "casa": true,
+    "competicion": "liga",
+    "competicion_nombre": "Primera FEB 26/27",
+    "estado": "pendiente",
+    "feb_partido_id": "2535901",
+    "fecha_jornada": "09/02/2027",
+    "inicio_madrid": "2027-02-10T20:00:00",
+    "jornada": 20,
+    "rival": "Bàsquet Menorca",
+    "sede": {
+      "direccion": "Madrid (Madrid)",
+      "pabellon": "Movistar Academy Magariños"
+    },
+    "uid": "estu-2627-j20@estudiantes-calendario"
+  },
+  {
+    "acta": "https://baloncestoenvivo.feb.es/Partido.aspx?p=2535913",
+    "casa": false,
+    "competicion": "liga",
+    "competicion_nombre": "Primera FEB 26/27",
+    "estado": "pendiente",
+    "feb_partido_id": "2535913",
+    "fecha_jornada": "14/02/2027",
+    "inicio_madrid": "2027-02-14T12:30:00",
+    "jornada": 21,
+    "rival": "Insolac Caja 87",
+    "sede": {
+      "direccion": "Sevilla (Sevilla)",
+      "pabellon": "Palacio Deportes San Pablo"
+    },
+    "uid": "estu-2627-j21@estudiantes-calendario"
+  },
+  {
+    "acta": "https://baloncestoenvivo.feb.es/Partido.aspx?p=2535919",
+    "casa": false,
+    "competicion": "liga",
+    "competicion_nombre": "Primera FEB 26/27",
+    "estado": "pendiente",
+    "feb_partido_id": "2535919",
+    "fecha_jornada": "19/02/2027",
+    "inicio_madrid": "2027-02-19T21:00:00",
+    "jornada": 22,
+    "rival": "Iberolea Palencia",
+    "sede": {
+      "direccion": "Palencia (Palencia)",
+      "pabellon": "Pabellón Municipal de Deportes (palencia)"
+    },
+    "uid": "estu-2627-j22@estudiantes-calendario"
+  },
+  {
+    "acta": "https://baloncestoenvivo.feb.es/Partido.aspx?p=2535928",
+    "casa": true,
+    "competicion": "liga",
+    "competicion_nombre": "Primera FEB 26/27",
+    "estado": "pendiente",
+    "feb_partido_id": "2535928",
+    "fecha_jornada": "05/03/2027",
+    "inicio_madrid": "2027-03-07T12:00:00",
+    "jornada": 23,
+    "rival": "Caja Rural CB Zamora",
+    "sede": {
+      "direccion": "Madrid (Madrid)",
+      "pabellon": "Movistar Arena"
+    },
+    "uid": "estu-2627-j23@estudiantes-calendario"
+  },
+  {
+    "acta": "https://baloncestoenvivo.feb.es/Partido.aspx?p=2535933",
+    "casa": false,
+    "competicion": "liga",
+    "competicion_nombre": "Primera FEB 26/27",
+    "estado": "pendiente",
+    "feb_partido_id": "2535933",
+    "fecha_jornada": "09/03/2027",
+    "inicio_madrid": "2027-03-10T20:45:00",
+    "jornada": 24,
+    "rival": "HLA Alicante",
+    "sede": {
+      "direccion": "Alicante/Alacant (Alicante)",
+      "pabellon": "Centre de Tecnificació Esportiva D’alacant"
+    },
+    "uid": "estu-2627-j24@estudiantes-calendario"
+  },
+  {
+    "acta": "https://baloncestoenvivo.feb.es/Partido.aspx?p=2535946",
+    "casa": true,
+    "competicion": "liga",
+    "competicion_nombre": "Primera FEB 26/27",
+    "estado": "pendiente",
+    "feb_partido_id": "2535946",
+    "fecha_jornada": "14/03/2027",
+    "inicio_madrid": "2027-03-14T12:00:00",
+    "jornada": 25,
+    "rival": "Coviran Granada",
+    "sede": {
+      "direccion": "Madrid (Madrid)",
+      "pabellon": "Movistar Arena"
+    },
+    "uid": "estu-2627-j25@estudiantes-calendario"
+  },
+  {
+    "acta": "https://baloncestoenvivo.feb.es/Partido.aspx?p=2535950",
+    "casa": false,
+    "competicion": "liga",
+    "competicion_nombre": "Primera FEB 26/27",
+    "estado": "pendiente",
+    "feb_partido_id": "2535950",
+    "fecha_jornada": "19/03/2027",
+    "inicio_madrid": "2027-03-20T19:00:00",
+    "jornada": 26,
+    "rival": "Bueno Arenas Albacete Basket",
+    "sede": {
+      "direccion": "Albacete (Albacete)",
+      "pabellon": "Pabellón del Parque"
+    },
+    "uid": "estu-2627-j26@estudiantes-calendario"
+  },
+  {
+    "acta": "https://baloncestoenvivo.feb.es/Partido.aspx?p=2535964",
+    "casa": true,
+    "competicion": "liga",
+    "competicion_nombre": "Primera FEB 26/27",
+    "estado": "pendiente",
+    "feb_partido_id": "2535964",
+    "fecha_jornada": "26/03/2027",
+    "inicio_madrid": "2027-03-28T12:00:00",
+    "jornada": 27,
+    "rival": "Grupo Alega Cantabria",
+    "sede": {
+      "direccion": "Madrid (Madrid)",
+      "pabellon": "Movistar Arena"
+    },
+    "uid": "estu-2627-j27@estudiantes-calendario"
+  },
+  {
+    "acta": "https://baloncestoenvivo.feb.es/Partido.aspx?p=2535972",
+    "casa": false,
+    "competicion": "liga",
+    "competicion_nombre": "Primera FEB 26/27",
+    "estado": "pendiente",
+    "feb_partido_id": "2535972",
+    "fecha_jornada": "02/04/2027",
+    "inicio_madrid": "2027-04-03T18:30:00",
+    "jornada": 28,
+    "rival": "Partizán de Fuenlabrada",
+    "sede": {
+      "direccion": "Fuenlabrada (Madrid)",
+      "pabellon": "Fernando Martin, Pabellon"
+    },
+    "uid": "estu-2627-j28@estudiantes-calendario"
+  },
+  {
+    "acta": "https://baloncestoenvivo.feb.es/Partido.aspx?p=2535982",
+    "casa": false,
+    "competicion": "liga",
+    "competicion_nombre": "Primera FEB 26/27",
+    "estado": "pendiente",
+    "feb_partido_id": "2535982",
+    "fecha_jornada": "09/04/2027",
+    "inicio_madrid": "2027-04-11T18:00:00",
+    "jornada": 29,
+    "rival": "Inveready Askatuak Gipuzkoa",
+    "sede": {
+      "direccion": "Donostia-San Sebastián (Guipúzcoa)",
+      "pabellon": "Polideportivo Josean Gasca"
+    },
+    "uid": "estu-2627-j29@estudiantes-calendario"
+  },
+  {
+    "acta": "https://baloncestoenvivo.feb.es/Partido.aspx?p=2535989",
+    "casa": true,
+    "competicion": "liga",
+    "competicion_nombre": "Primera FEB 26/27",
+    "estado": "pendiente",
+    "feb_partido_id": "2535989",
+    "fecha_jornada": "16/04/2027",
+    "inicio_madrid": "2027-04-18T18:30:00",
+    "jornada": 30,
+    "rival": "Grupo Ureta Tizona Burgos",
+    "sede": {
+      "direccion": "Madrid (Madrid)",
+      "pabellon": "Movistar Arena"
+    },
+    "uid": "estu-2627-j30@estudiantes-calendario"
+  },
+  {
+    "acta": "https://baloncestoenvivo.feb.es/Partido.aspx?p=2536001",
+    "casa": true,
+    "competicion": "liga",
+    "competicion_nombre": "Primera FEB 26/27",
+    "estado": "pendiente",
+    "feb_partido_id": "2536001",
+    "fecha_jornada": "20/04/2027",
+    "inicio_madrid": "2027-04-21T20:00:00",
+    "jornada": 31,
+    "rival": "Fibwi Mallorca Basquet Palma",
+    "sede": {
+      "direccion": "Madrid (Madrid)",
+      "pabellon": "Movistar Arena"
+    },
+    "uid": "estu-2627-j31@estudiantes-calendario"
+  },
+  {
+    "acta": "https://baloncestoenvivo.feb.es/Partido.aspx?p=2536009",
+    "casa": false,
+    "competicion": "liga",
+    "competicion_nombre": "Primera FEB 26/27",
+    "estado": "pendiente",
+    "feb_partido_id": "2536009",
+    "fecha_jornada": "25/04/2027",
+    "inicio_madrid": "2027-04-24T19:00:00",
+    "jornada": 32,
+    "rival": "Club Ourense Baloncesto",
+    "sede": {
+      "direccion": "Ourense (Ourense)",
+      "pabellon": "Pazo Dos Deportes Paco Paz"
+    },
+    "uid": "estu-2627-j32@estudiantes-calendario"
+  },
+  {
+    "acta": "https://baloncestoenvivo.feb.es/Partido.aspx?p=2536018",
+    "casa": true,
+    "competicion": "liga",
+    "competicion_nombre": "Primera FEB 26/27",
+    "estado": "pendiente",
+    "feb_partido_id": "2536018",
+    "fecha_jornada": "30/04/2027",
+    "inicio_madrid": "2027-05-02T18:30:00",
+    "jornada": 33,
+    "rival": "Alimerka Oviedo Baloncesto",
+    "sede": {
+      "direccion": "Madrid (Madrid)",
+      "pabellon": "Movistar Academy Magariños"
+    },
+    "uid": "estu-2627-j33@estudiantes-calendario"
+  },
+  {
+    "acta": "https://baloncestoenvivo.feb.es/Partido.aspx?p=2536024",
+    "casa": false,
+    "competicion": "liga",
+    "competicion_nombre": "Primera FEB 26/27",
+    "estado": "pendiente",
+    "feb_partido_id": "2536024",
+    "fecha_jornada": "07/05/2027",
+    "inicio_madrid": "2027-05-07T21:00:00",
+    "jornada": 34,
+    "rival": "Cajasol Coto Córdoba",
+    "sede": {
+      "direccion": "Córdoba (Córdoba)",
+      "pabellon": "Palacio Municipal de Deportes Vista Alegre"
+    },
+    "uid": "estu-2627-j34@estudiantes-calendario"
+  },
+  {
+    "acta": "https://www.feb.es/competiciones/Partido.aspx?p=2543131",
+    "casa": false,
     "competicion": "copa",
     "competicion_nombre": "Copa España 26/27",
-    "casa": false,
-    "rival": "Coviran Granada",
-    "feb_partido_id": "2543131",
-    "acta": "https://www.feb.es/competiciones/Partido.aspx?p=2543131",
     "estado": "jugado",
+    "feb_partido_id": "2543131",
+    "fecha_jornada": "20/10/2026",
     "inicio_madrid": "2026-10-20T20:30:00",
-    "resultado_local": 76,
-    "resultado_visitante": 86,
+    "jornada": 1,
     "resultado_estu": 86,
+    "resultado_local": 76,
     "resultado_rival": 76,
-    "victoria": true,
+    "resultado_visitante": 86,
+    "rival": "Coviran Granada",
+    "ronda": "1/16",
     "sede": {
-      "pabellon": "Palacio Deportes Granada",
-      "direccion": "Granada (Granada)"
-    }
+      "direccion": "Granada (Granada)",
+      "pabellon": "Palacio Deportes Granada"
+    },
+    "uid": "estu-2627-copa-j01@estudiantes-calendario",
+    "victoria": true
+  },
+  {
+    "acta": "https://www.feb.es/competiciones/Partido.aspx?p=2550809",
+    "casa": false,
+    "competicion": "copa",
+    "competicion_nombre": "Copa España 26/27",
+    "estado": "pendiente",
+    "feb_partido_id": "2550809",
+    "fecha_jornada": "17/11/2026",
+    "fecha_provisional": true,
+    "inicio_madrid": "2026-11-17T12:00:00",
+    "jornada": 2,
+    "rival": "Caceres Patrimonio de la Humanidad",
+    "ronda": "1/8",
+    "sede": {
+      "direccion": "Cáceres (Cáceres)",
+      "pabellon": "Pabellón Multiusos Ciudad de Cáceres"
+    },
+    "uid": "estu-2627-copa-j02@estudiantes-calendario"
   }
 ]
