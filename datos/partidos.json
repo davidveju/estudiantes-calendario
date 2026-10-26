@@ -92,17 +92,22 @@
     "casa": false,
     "competicion": "liga",
     "competicion_nombre": "Primera FEB 26/27",
-    "estado": "pendiente",
+    "estado": "jugado",
     "feb_partido_id": "2535763",
     "fecha_jornada": "23/10/2026",
     "inicio_madrid": "2026-10-25T18:00:00",
     "jornada": 5,
+    "resultado_estu": 94,
+    "resultado_local": 78,
+    "resultado_rival": 78,
+    "resultado_visitante": 94,
     "rival": "Fibwi Mallorca Basquet Palma",
     "sede": {
       "direccion": "Palma de Mallorca (Illes Balears)",
       "pabellon": "Polideportivo de Son Moix"
     },
-    "uid": "estu-2627-j05@estudiantes-calendario"
+    "uid": "estu-2627-j05@estudiantes-calendario",
+    "victoria": true
   },
   {
     "acta": "https://baloncestoenvivo.feb.es/Partido.aspx?p=2535775",
@@ -628,8 +633,7 @@
     "estado": "pendiente",
     "feb_partido_id": "2550809",
     "fecha_jornada": "17/11/2026",
-    "fecha_provisional": true,
-    "inicio_madrid": "2026-11-17T12:00:00",
+    "inicio_madrid": "2026-11-18T20:00:00",
     "jornada": 2,
     "rival": "Caceres Patrimonio de la Humanidad",
     "ronda": "1/8",
