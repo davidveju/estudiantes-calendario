@@ -114,17 +114,22 @@
     "casa": true,
     "competicion": "liga",
     "competicion_nombre": "Primera FEB 26/27",
-    "estado": "pendiente",
+    "estado": "jugado",
     "feb_partido_id": "2535775",
     "fecha_jornada": "30/10/2026",
     "inicio_madrid": "2026-11-01T18:30:00",
     "jornada": 6,
+    "resultado_estu": 102,
+    "resultado_local": 102,
+    "resultado_rival": 80,
+    "resultado_visitante": 80,
     "rival": "Cajasiete Gran Canaria",
     "sede": {
       "direccion": "Madrid (Madrid)",
       "pabellon": "Movistar Arena"
     },
-    "uid": "estu-2627-j06@estudiantes-calendario"
+    "uid": "estu-2627-j06@estudiantes-calendario",
+    "victoria": true
   },
   {
     "acta": "https://baloncestoenvivo.feb.es/Partido.aspx?p=2535786",
