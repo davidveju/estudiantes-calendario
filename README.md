@@ -1,5 +1,16 @@
 # 🏀 Movistar Estudiantes 26/27 — Calendario
 
+> [!WARNING]
+> **Repositorio archivado.** El calendario se ha migrado a
+> [davidveju/calendarios](https://github.com/davidveju/calendarios), dentro de
+> `deportes/baloncesto/`. Si estabas suscrito, elimina este calendario y añade
+> la nueva URL:
+>
+> ```text
+> https://raw.githubusercontent.com/davidveju/calendarios/main/deportes/baloncesto/estudiantes.ics
+> ```
+
+
 Todos los partidos del Movistar Estudiantes masculino 26/27 —liga Primera FEB,
 Copa España y playoffs— directos en tu calendario. Te suscribes una vez y se
 actualiza solo: los partidos jugados aparecen con el resultado, sin que tengas
@@ -22,7 +33,7 @@ que hacer nada.
 3. Pega esta URL y pulsa `Añadir calendario`:
 
    ```text
-   https://raw.githubusercontent.com/davidveju/estudiantes-calendario/main/estudiantes.ics
+   https://raw.githubusercontent.com/davidveju/calendarios/main/deportes/baloncesto/estudiantes.ics
    ```
 
 > Google refresca los calendarios suscritos cada 12–24 h: los horarios y
